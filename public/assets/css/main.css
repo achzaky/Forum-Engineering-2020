@@ -49,8 +49,6 @@ body{
     background-image: url("../photos/Lobby.jpeg");
     height: 100%;
     background-size:100%;
-    filter: blur(8px);
-  -webkit-filter: blur(8px);
   }
 
   .wrapper-bg-exhibition{

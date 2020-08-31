@@ -3,15 +3,18 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\FeedbackModel;
 use CodeIgniter\Email\Email;
 
 class Pages extends BaseController
 {
     protected $user;
+    protected $feedback;
 
     public function __construct()
     {
         $this->user = new UserModel();
+        $this->feedback = new FeedbackModel();
     }
 
     public function index()
@@ -42,6 +45,15 @@ class Pages extends BaseController
     {
         session_destroy();
         return redirect()->to('/pages');
+    }
+
+    public function testInputData()
+    {
+        $this->feedback->save([
+            'id' => 123,
+            'use_email' => 'test@test.com',
+            'feedbackMessage' => 'Testing doang'
+        ]);
     }
 
     //--------------------------------------------------------------------

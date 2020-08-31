@@ -6,11 +6,11 @@ use App\Models\SponsorModel;
 
 class Admin extends BaseController
 {
-    // protected $sponsor;
+    protected $sponsor;
 
     public function __construct()
     {
-        // $this->sponsor = new SponsorModel();
+        $this->sponsor = new SponsorModel();
     }
 
     public function index()
@@ -22,8 +22,8 @@ class Admin extends BaseController
 
     public function insertData()
     {
-        $sponsor = new SponsorModel();
-        $sponsor->save([
+
+        $this->sponsor->save([
             'name' => $this->request->getVar('sponsorName'),
 
             'description'
@@ -48,7 +48,7 @@ class Admin extends BaseController
             => $this->request->getVar('sponsorBackground'),
 
             'sponsor_nameDisplay'
-            => '' //$this->request->getVar('sponsorNameDisp')
+            => $this->request->getVar('sponsorNameDisp')
         ]);
     }
 
