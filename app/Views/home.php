@@ -113,16 +113,18 @@
         </div>
     </div>
 
+    </div>
+    </form>
 
 
+    <?php foreach ($audvid as $av) : ?>
     <!-- AUDITORIUM -->
     <div id='auditorium' class='wrapper'>
         <div class="wrapper-bg-auditorium">
             <div class="container">
                 <div class="row">
                     <div class="col-5  embed-responsive embed-responsive-16by9 centered-thing"> Youtube
-                        <iframe id='auditoriumVideo' width="560" height="315"
-                            src="https://www.youtube.com/embed/f02mOEt11OQ?autoplay=0; controls=0;"
+                        <iframe id='auditoriumVideo' width="560" height="315" src="<?= $av['video']; ?>; controls=0;"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -130,6 +132,7 @@
             </div>
         </div>
     </div>
+    <?php endforeach; ?>
 
 
     <!-- Exhibition -->
@@ -185,7 +188,7 @@
 
     <!-- Fade out login form -->
     <?php if (isset($_SESSION['logonUser'])) {
-    if ($_SESSION['logonUser'] == 'aktif') { ?>
+        if ($_SESSION['logonUser'] == 'aktif') { ?>
     <script>
     // $('#bgBlur').css('filter', 'none').fadeIn(1000);
     $('#loginCard').fadeOut(600);
@@ -201,7 +204,7 @@
     $('#resourceCenter').fadeOut();
     </script>
     <?php }
-} ?>
+    } ?>
 
     <script>
     $(document).ready(function() {

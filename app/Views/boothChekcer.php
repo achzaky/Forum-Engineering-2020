@@ -1,3 +1,5 @@
-<?php foreach ($sponsorData as $sponsor) : ?>
-<p><?= $sponsor['name']; ?></p>
-<?php endforeach; ?>
+<body>
+    <?php foreach ($audvid as $av) : ?>
+    <p><?= $av['video']; ?></p>
+    <?php endforeach; ?>
+</body>
