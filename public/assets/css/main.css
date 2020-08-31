@@ -46,7 +46,7 @@ body{
 }
 
   .wrapper-bg {
-    background-image: url("../photos/Lobby.jpeg");
+    background-image: url("../photos/Lobby.jpg");
     height: 100%;
     background-size:100%;
   }
@@ -65,7 +65,7 @@ body{
   }
 
   .wrapper-bg-connectionArea{
-    background-image: url("../photos/c_area.jpeg");
+    background-image: url("../photos/connection.jpg");
     height: 100%;
     background-size:100%;
   }
