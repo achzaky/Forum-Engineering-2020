@@ -74,7 +74,7 @@
 
     <form action="/pages/login" method="post">
         <div id="registration" class="wrapper">
-            <div id='bgBlur' class="wrapper-bg-auditorium"></div>
+            <div class="wrapper-bg"></div>
             <div id='loginCard' class="loginPanel">
                 <img src="/assets/photos/forenglogo.png" class="foto">
                 <h1 class="user-select-none">Welcome</h1>
@@ -83,18 +83,37 @@
                 <p class="user-select-none">ID Peserta</p>
                 <input id="password" type="text" name="password" placeholder="Enter ID Peserta">
                 <input type="submit" name="login" value="Login">
-                <p> </p>
+                <p style="margin-top: 0%;"></p>
                 <a class="signup">Sign up</a>
             </div>
         </div>
     </form>
 
     <!-- Login and lobby -->
-    <form action="/pages/login" method="post">
-        <div id='lobby' class='wrapper'>
-            <div class="wrapper-bg"></div>
-
+    <div id='lobby' class='wrapper'>
+        <div class="wrapper-bg-lobby">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="margin-top: 280px;">
+                        <a id="lCo" style="margin-left: 40px; opacity: 0%; font-size: 60px;" href="#">HERE!</a>
+                    </div>
+                    <div class="col" style="margin-top: 300px;">
+                        <a id="lA" style="margin-left: 175px; opacity: 0%; font-size: 45px;" href="#">HERE!</a>
+                        <div class="row">
+                            <div class="col" style="margin-left: -20px;">
+                                <a id="lex1" style="font-size: 65px; opacity: 0%;" href="#">HER</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="margin-top: 370px;">
+                        <a id="lex2" style="margin-left: -10px; font-size: 40px; opacity: 0%;" href="#">HERE!</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    </div>
     </form>
 
 
@@ -136,40 +155,7 @@
 
     <!-- About -->
     <div id='about' class='wrapper'>
-        <div class="wrapper-bg-about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-8"
-                        style="font-size: 60px; text-shadow: 5px 5px black; font-family: Poppins, cursive; font-weight: bold; color: white; margin-top: 50px;">
-                        About<br>Forum Engineering
-                    </div>
-                    <div class="col">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="./assets/photos/forenglogo.png" style="width:300px;height:300px;">
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./assets/photos/wika.png" style="width:300px;height:300px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col transbox">
-                            <p>Forum Engineering is WIKA's annual event. This Years theme is about "Future Solution for
-                                Lifecycle Construction", present newest technology which more productive and efficient
-                                on
-                                construction's industry. There are echibitions by WIKA's departements, subsidaries, and
-                                partners. <a class="aboutForeng" href="https://foreng.wika.co.id/about"
-                                    target="_blank">Read
-                                    more</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="wrapper-bg-about"></div>
     </div>
 
 
@@ -179,7 +165,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col"
-                        style="font-size: 60px; text-shadow: 5px 5px black; text-align: center; font-family: Poppins, cursive; font-weight: bold; color: white; margin-top: 50px;">
+                        style="font-size: 60px; text-align: center; font-family: Poppins, cursive; font-weight: bold; color: white; margin-top: 50px;">
                         Event Feedback
                         <div class="row">
                             <div class="col transboxFeedback">
@@ -198,7 +184,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!-- Fade out login form -->
@@ -242,6 +227,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
+        $('#registration').fadeOut();
     });
 
     $("#navLobby").click(function() {
@@ -257,6 +243,71 @@
         $('#exhibition').fadeOut();
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+    });
+
+    $("#lCo").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeIn();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+    });
+
+    $("#lA").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeIn();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+    });
+
+    $("#lex1").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+    });
+
+    $("#lex2").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
     });
 
     $("#navExhibition").click(function() {
@@ -271,6 +322,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
+        $('#registration').fadeOut();
     });
 
     $("#navConnectionArea").click(function() {
@@ -285,21 +337,23 @@
         $('#connectionArea').fadeIn();
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
+        $('#registration').fadeOut();
     });
 
-    $("#navRC").click(function() {
-        var video = $('#auditoriumVideo').attr("src");
-        $('#auditoriumVideo').attr("src", "");
-        $('#auditoriumVideo').attr("src", video);
+    // $("#navRC").click(function() {
+    //     var video = $('#auditoriumVideo').attr("src");
+    //     $('#auditoriumVideo').attr("src", "");
+    //     $('#auditoriumVideo').attr("src", video);
 
-        $('#auditorium').fadeOut();
-        $('#about').fadeOut();
-        $('#eventFeedback').fadeOut();
-        $('#exhibition').fadeOut();
-        $('#connectionArea').fadeOut();
-        $('#resourceCenter').fadeIn();
-        $('#lobby').fadeOut();
-    });
+    //     $('#auditorium').fadeOut();
+    //     $('#about').fadeOut();
+    //     $('#eventFeedback').fadeOut();
+    //     $('#exhibition').fadeOut();
+    //     $('#connectionArea').fadeOut();
+    //     $('#resourceCenter').fadeIn();
+    //     $('#lobby').fadeOut();
+    //     $('#registration').fadeOut();
+    // });
 
     $("#navEF").click(function() {
         var video = $('#auditoriumVideo').attr("src");
@@ -313,6 +367,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
+        $('#registration').fadeOut();
     });
 
     // $("#navAbout").click(function() {
