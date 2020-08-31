@@ -70,11 +70,9 @@
     </nav>
 </div>
 
-
-<!-- Login and lobby -->
 <form action="/pages/login" method="post">
-    <div id='lobby' class='wrapper'>
-        <div id='bgBlur' class="wrapper-bg"></div>
+    <div id="registration" class="wrapper">
+        <div id='bgBlur' class="wrapper-bg-auditorium"></div>
         <div id='loginCard' class="loginPanel">
             <img src="/assets/photos/forenglogo.png" class="foto">
             <h1 class="user-select-none">Welcome</h1>
@@ -86,6 +84,14 @@
             <p> </p>
             <a class="signup">Sign up</a>
         </div>
+    </div>
+</form>
+
+<!-- Login and lobby -->
+<form action="/pages/login" method="post">
+    <div id='lobby' class='wrapper'>
+        <div class="wrapper-bg"></div>
+
     </div>
 </form>
 
@@ -194,9 +200,18 @@
 <?php if (isset($_SESSION['logonUser'])) {
     if ($_SESSION['logonUser'] == 'aktif') { ?>
 <script>
-$('#bgBlur').css('filter', 'none').fadeIn(1000);
+// $('#bgBlur').css('filter', 'none').fadeIn(1000);
 $('#loginCard').fadeOut(600);
 $('#nav').fadeIn(600);
+
+$('#registration').fadeOut();
+$('#lobby').fadeIn();
+$('#auditorium').fadeOut();
+$('#about').fadeOut();
+$('#eventFeedback').fadeOut();
+$('#exhibition').fadeOut();
+$('#connectionArea').fadeOut();
+$('#resourceCenter').fadeOut();
 </script>
 <?php }
 } ?>

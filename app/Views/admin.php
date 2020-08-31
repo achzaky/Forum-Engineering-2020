@@ -1,6 +1,6 @@
 <div class="container">
-    <h2 class='mt-5'>Admin Panel</h2>
-    <h3 class='mt-5 mb-3'>Input data sponsor</h3>
+    <h2 class='mt-2'>Admin Panel</h2>
+    <h3 class='mt-3 mb-3'>Input data sponsor</h3>
 
     <form action="" method="POST">
         <!-- Nama -->
