@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\SponsorModel;
+use App\Models\auditoriumModel;
 
 class Admin extends BaseController
 {
     protected $sponsor;
+    protected $auditorium;
 
     public function __construct()
     {
         $this->sponsor = new SponsorModel();
+        $this->auditorium = new auditoriumModel();
     }
 
     public function index()
@@ -23,7 +26,7 @@ class Admin extends BaseController
     public function insertData()
     {
 
-        $this->sponsor->save([
+        $this->sponsor->insert([
             'name' => $this->request->getVar('sponsorName'),
 
             'description'
@@ -50,6 +53,9 @@ class Admin extends BaseController
             'sponsor_nameDisplay'
             => $this->request->getVar('sponsorNameDisp')
         ]);
+
+        $checkData =  $this->sponsor->findAll();
+        dd($checkData);
     }
 
     public function boothCheck()
@@ -85,6 +91,16 @@ class Admin extends BaseController
 
         ];
         dd($data);
+    }
+
+    public function videoAuditorium()
+    {
+        $data = [
+            'video' => $this->request->getVar('audVid') . '?autoplay=0'
+        ];
+
+        $this->auditorium->update($id = 1111, $data);
+        return redirect()->to('/admin');
     }
 
     //--------------------------------------------------------------------

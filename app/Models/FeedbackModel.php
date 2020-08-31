@@ -8,4 +8,6 @@ class FeedbackModel extends Model
 {
     protected $table = 'feedback';
     protected $primaryKey = 'id';
+
+    protected $allowedFields = ['id', 'use_email', 'feedbackMessage'];
 }
