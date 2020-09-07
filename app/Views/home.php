@@ -35,6 +35,13 @@
                                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                         </svg>Exhibition</a>
 
+                    <a id='navUnknown' class="nav-link active">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                        </svg>Unknown</a>
+
                     <a id='navAuditorium' class="nav-link active">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tv-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +130,7 @@
         <div class="wrapper-bg-auditorium">
             <div class="container">
                 <div class="row">
-                    <div class="col-5  embed-responsive embed-responsive-16by9 centered-thing"> Youtube
+                    <div class="position  embed-responsive embed-responsive-16by9 centered-thing"> Youtube
                         <iframe id='auditoriumVideo' width="560" height="315" src="<?= $av['video']; ?>; controls=0;"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -140,10 +147,26 @@
         <div class="wrapper-bg-exhibition"></div>
     </div>
 
+    <!-- Unknown -->
+    <div id='unknown' class='wrapper'>
+        <div class="wrapper-bg-unknown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 embed-responsive embed-responsive-16by9 centered-things">
+                        <iframe width="600" height="338"
+                            src="https://datastudio.google.com/embed/reporting/74e5ebb4-e21c-4dbb-83aa-97456a4e8c39/page/iy7dB"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Connection Area -->
     <div id='connectionArea' class='wrapper'>
-        <div class="wrapper-bg-connectionArea"></div>
+        <div class="wrapper-bg-connectionArea">
+        </div>
     </div>
 
 
@@ -168,12 +191,14 @@
                         style="font-size: 60px; text-align: center; font-family: Poppins, cursive; font-weight: bold; color: white; margin-top: 50px;">
                         Event Feedback
                         <div class="row">
-                            <div class="col transboxFeedback">
+                            <div class="colFeedback transboxFeedback">
                                 <form autocompolete="off" action="" method="post">
                                     <p class="user-select-none">If you were running the event, what would you have done
                                         differently?</p>
                                     <input id="answer" autocomplete="off" type="text" name="answer1">
                                     <p class="user-select-none">Any suggestions for future event topics?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <p class="user-select-none">What did you like most about the event?</p>
                                     <input id="answer" autocomplete="off" type="text" name="answer2">
                                     <input type="submit" name="submitFeedback" value="Submit Feedback">
                             </div>
@@ -202,6 +227,7 @@
     $('#exhibition').fadeOut();
     $('#connectionArea').fadeOut();
     $('#resourceCenter').fadeOut();
+    $('#unknown').fadeOut();
     </script>
     <?php }
     } ?>
@@ -215,6 +241,7 @@
         $('#exhibition').fadeOut();
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#navAuditorium").click(function() {
@@ -228,6 +255,7 @@
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#navLobby").click(function() {
@@ -244,6 +272,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#lCo").click(function() {
@@ -260,6 +289,7 @@
         $('#connectionArea').fadeIn();
         $('#resourceCenter').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#lA").click(function() {
@@ -276,6 +306,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#lex1").click(function() {
@@ -292,6 +323,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#lex2").click(function() {
@@ -308,6 +340,7 @@
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     $("#navExhibition").click(function() {
@@ -319,6 +352,23 @@
         $('#about').fadeOut();
         $('#eventFeedback').fadeOut();
         $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
+
+    $("#navUnknown").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+        $('#auditorium').fadeOut();
+        $('#unknown').fadeIn();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
@@ -338,6 +388,7 @@
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     // $("#navRC").click(function() {
@@ -368,6 +419,7 @@
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();
         $('#registration').fadeOut();
+        $('#unknown').fadeOut();
     });
 
     // $("#navAbout").click(function() {

@@ -63,8 +63,14 @@ body {
   background-size: 100%;
 }
 
+.wrapper-bg-unknown {
+  background-image: url("../photos/feedback.jpg");
+  height: 100%;
+  background-size: 100%;
+}
+
 .wrapper-bg-auditorium {
-  background-image: url("../photos/auditorium.jpg");
+  background-image: url("../photos/alt\ 4-2.jpg");
   height: 100%;
   background-size: 100%;
 }
@@ -104,7 +110,7 @@ body {
   font-size: 30px;
 }
 .navbar-nav {
-  margin-left: 80px;
+  margin-left: 40px;
   margin-bottom: -5px;
   font-family: "Poppins", cursive;
   font-size: medium;
@@ -115,7 +121,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 160px;
+  width: 155px;
 }
 
 .nav-link:hover {
@@ -132,7 +138,7 @@ body {
   width: 200px;
   height: 250px;
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 1); /* Black w/opacity/see-through */
+  background-color: rgba(49, 148, 9, 1); /* Black w/opacity/see-through */
   color: black;
   top: 25%;
   left: 90%;
@@ -277,7 +283,7 @@ input[type="password"] {
   width: 80%;
   margin-top: 0%;
   margin-left: 10%;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 70%;
   font-family: "Poppins", cursive;
 }
@@ -327,10 +333,27 @@ iframe {
 
 .centered-thing {
   position: absolute;
-  margin: auto;
-  top: 55%;
+  margin-top: 24%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.centered-things {
+  position: absolute;
+  margin-top: 3%;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.position {
+  -ms-flex: 0 0 46.666667%;
+  flex: 0 0 47.666667%;
+  max-width: 47.666667%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .aboutHeader {
@@ -357,7 +380,9 @@ iframe {
 
 .transboxFeedback p {
   font-size: 30%;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: -4%;
+  margin-left: 3%;
   text-align: left;
   color: white;
   font-family: "Poppins", cursive;
@@ -367,6 +392,15 @@ iframe {
   margin-bottom: px;
 }
 
+.colFeedback {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 60%;
+  left: 50%;
+  margin-top: 0%;
+  margin-left: 20%;
+}
+
 .transboxFeedback input[type="text"],
 input[type="answer"] {
   border: none;
@@ -374,7 +408,7 @@ input[type="answer"] {
   background: transparent;
   outline: none;
   height: 20px;
-  width: 100%;
+  width: 95%;
   margin-top: 0%;
   margin-left: 0%;
   color: white;
@@ -385,7 +419,7 @@ input[type="answer"] {
 .transboxFeedback input[type="submit"] {
   outline: none;
   height: 40px;
-  width: 50%;
+  width: 30%;
   margin-left: 0%;
   margin-top: 2%;
   margin-bottom: -3%;
