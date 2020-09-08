@@ -144,7 +144,15 @@
 
     <!-- Exhibition -->
     <div id='exhibition' class='wrapper'>
-        <div class="wrapper-bg-exhibition"></div>
+        <div class="wrapper-bg-exhibition">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="margin-top: 380px;">
+                        <a style="margin-left: 140px; opacity: 0%; font-size: 100px;" href="smallBooth">Hi!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Unknown -->
@@ -171,15 +179,15 @@
 
 
     <!-- Resource Center -->
-    <div id='resourceCenter' class='wrapper'>
+    <!-- <div id='resourceCenter' class='wrapper'>
         <div class="wrapper-bg-resource"></div>
-    </div>
+    </div> -->
 
 
     <!-- About -->
-    <div id='about' class='wrapper'>
+    <!-- <div id='about' class='wrapper'>
         <div class="wrapper-bg-about"></div>
-    </div>
+    </div> -->
 
 
     <!-- Event Feedback -->
