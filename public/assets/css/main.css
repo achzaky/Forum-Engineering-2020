@@ -58,13 +58,13 @@ body {
 }
 
 .wrapper-bg-exhibition {
-  background-image: url("../photos/Exhibitions.jpg");
+  background-image: url("../photos/ALL.jpg");
   height: 100%;
   background-size: 100%;
 }
 
 .wrapper-bg-unknown {
-  background-image: url("../photos/feedback.jpg");
+  background-image: url("../");
   height: 100%;
   background-size: 100%;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 .wrapper-bg-connectionArea {
-  background-image: url("../photos/connection.jpg");
+  background-image: url("../photos/connection-min.jpg");
   height: 100%;
   background-size: 100%;
 }
@@ -333,7 +333,8 @@ iframe {
 
 .centered-thing {
   position: absolute;
-  margin-top: 24%;
+  margin-top: 26%;
+  margin-left: 2px;
   top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -348,8 +349,8 @@ iframe {
 }
 .position {
   -ms-flex: 0 0 46.666667%;
-  flex: 0 0 47.666667%;
-  max-width: 47.666667%;
+  flex: 0 0 55.666667%;
+  max-width: 55.666667%;
   position: relative;
   width: 100%;
   padding-right: 15px;
