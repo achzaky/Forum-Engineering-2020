@@ -52,7 +52,7 @@ body {
 }
 
 .wrapper-bg-lobby {
-  background-image: url("../photos/Lobby.jpg");
+  background-image: url("../photos/Revisi\ Design\ Lobby\ Foreng\ 9\ Sept\ 2020\ res\ 2400\ x\ 1350.jpg");
   height: 100%;
   background-size: 100%;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 .wrapper-bg-connectionArea {
-  background-image: url("../photos/connection-min.jpg");
+  background-image: url("../photos/connection\ room\ foreng\ rev\ 10.png");
   height: 100%;
   background-size: 100%;
 }
@@ -94,7 +94,7 @@ body {
 }
 
 .wrapper-bg-feedback {
-  background-image: url("../photos/bout.jpeg");
+  background-image: url("../photos/activity.jpg");
   height: 100%;
   background-size: 100%;
 }
@@ -138,7 +138,7 @@ body {
   width: 200px;
   height: 250px;
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(49, 148, 9, 1); /* Black w/opacity/see-through */
+  background-color: rgba(180, 158, 31, 0.863); /* Black w/opacity/see-through */
   color: black;
   top: 25%;
   left: 90%;
@@ -333,7 +333,7 @@ iframe {
 
 .centered-thing {
   position: absolute;
-  margin-top: 26%;
+  margin-top: 25%;
   margin-left: 2px;
   top: 38%;
   left: 50%;
@@ -400,6 +400,8 @@ iframe {
   left: 50%;
   margin-top: 0%;
   margin-left: 20%;
+  overflow-y: scroll;
+  height: 400px;
 }
 
 .transboxFeedback input[type="text"],
