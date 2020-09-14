@@ -18,6 +18,19 @@ class Admin extends BaseController
 
     public function index()
     {
+        $audVid = $this->auditorium->findAll();
+        $sponsorData = $this->sponsor->findAll();
+        $data = [
+            'sponsorData' => $sponsorData,
+            'audvid' => $audVid
+        ];
+        echo view('templates/header');
+        echo view('adminDashboard', $data);
+        echo view('templates/footer');
+    }
+
+    public function input()
+    {
         echo view('templates/header');
         echo view('admin');
         echo view('templates/footer');
@@ -25,6 +38,12 @@ class Admin extends BaseController
 
     public function insertData()
     {
+
+        $vidCode = preg_replace(
+            "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
+            "//www.youtube.com/embed/$2",
+            $this->request->getVar('sponsorVideo')
+        );
 
         $this->sponsor->insert([
             'name' => $this->request->getVar('sponsorName'),
@@ -36,7 +55,7 @@ class Admin extends BaseController
             => $this->request->getVar('sponsorPhone'),
 
             'video'
-            => $this->request->getVar('sponsorVideo'),
+            => $vidCode,
 
             'brosur'
             => $this->request->getVar('sponsorBrosur'),
@@ -95,8 +114,15 @@ class Admin extends BaseController
 
     public function videoAuditorium()
     {
+
+        $vidCode = preg_replace(
+            "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
+            "//www.youtube.com/embed/$2",
+            $this->request->getVar('audVid')
+        );
+
         $data = [
-            'video' => $this->request->getVar('audVid') . '?autoplay=0'
+            'video' => 'https:' . $vidCode . '?autoplay=0'
         ];
 
         $this->auditorium->update($id = 1111, $data);
