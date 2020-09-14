@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/booth/(:any)', 'Booth::index/$1');
 $routes->get('/admin', 'Admin::index');
+$routes->get('/boothk', 'Booth::boothK');
+$routes->get('/boothb', 'Booth::boothB');
 
 /**
  * --------------------------------------------------------------------

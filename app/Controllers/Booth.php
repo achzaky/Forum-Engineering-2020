@@ -17,7 +17,7 @@ class Booth extends BaseController
         $this->sponsor = new SponsorModel();
     }
 
-    public function index($sponsorBooth)
+    public function index($sponsorBooth = '')
     {
         $sponsorData = $this->sponsor->where('name', $sponsorBooth)
             ->findAll();
@@ -33,6 +33,19 @@ class Booth extends BaseController
         echo view('templates/footer');
     }
 
+    public function boothK()
+    {
+        echo view('templates/header');
+        echo view('boothK');
+        echo view('templates/footer');
+    }
+
+    public function boothB()
+    {
+        echo view('templates/header');
+        echo view('boothB');
+        echo view('templates/footer');
+    }
     //--------------------------------------------------------------------
 
 }
