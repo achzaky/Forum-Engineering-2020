@@ -130,7 +130,7 @@
         <div class="wrapper-bg-auditorium">
             <div class="container">
                 <div class="row">
-                    <div class="position  embed-responsive embed-responsive-16by9 centered-thing"> Youtube
+                    <div class="position  embed-responsive embed-responsive-16by9 centered-thing">
                         <iframe id='auditoriumVideo' width="560" height="315" src="<?= $av['video']; ?>; controls=0;"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -148,7 +148,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col" style="margin-top: 380px;">
-                        <a style="margin-left: 140px; opacity: 0%; font-size: 100px;" href="smallBooth">Hi!</a>
+                        <a style="margin-left: 140px; opacity: 0%; font-size: 100px;" href="/booth">Hi!</a>
                     </div>
                 </div>
             </div>
@@ -207,6 +207,11 @@
                                     <p class="user-select-none">Any suggestions for future event topics?</p>
                                     <input id="answer" autocomplete="off" type="text" name="answer2">
                                     <p class="user-select-none">What did you like most about the event?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <p class="user-select-none">What did you like least about the event?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <p class="user-select-none">How do you think this event could have been improved?
+                                    </p>
                                     <input id="answer" autocomplete="off" type="text" name="answer2">
                                     <input type="submit" name="submitFeedback" value="Submit Feedback">
                             </div>
