@@ -46,6 +46,13 @@ class Booth extends BaseController
         echo view('boothB');
         echo view('templates/footer');
     }
+
+    public function boothW()
+    {
+        echo view('templates/header');
+        echo view('boothW');
+        echo view('templates/footer');
+    }
     //--------------------------------------------------------------------
 
 }

@@ -40,7 +40,7 @@
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                        </svg>Unknown</a>
+                        </svg>Data</a>
 
                     <a id='navAuditorium' class="nav-link active">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tv-fill" fill="currentColor"
@@ -79,17 +79,18 @@
         </nav>
     </div>
 
-    <form action="/pages/login" method="post">
+    <form autocomplete="off" action="/pages/login" method="post">
         <div id="registration" class="wrapper">
-            <div class="wrapper-bg"></div>
+            <div id='bgBlur' class="wrapper-bg"></div>
             <div id='loginCard' class="loginPanel">
                 <img src="/assets/photos/forenglogo.png" class="foto">
                 <h1 class="user-select-none">Welcome</h1>
-                <p class="user-select-none">E-mail</p>
-                <input id="username" type="text" name="email" placeholder="Enter E-mail">
+                <p class="user-select-none">E-mail/Phone Number</p>
+                <input id="username" autocomplete="off" type="text" name="email"
+                    placeholder="Enter E-mail or Phone Number">
                 <p class="user-select-none">ID Peserta</p>
-                <input id="password" type="text" name="password" placeholder="Enter ID Peserta">
-                <input type="submit" name="login" value="Login">
+                <input id="password" autocomplete="off" type="text" name="password" placeholder="Enter ID Peserta">
+                <input type="submit" autocomplete="off" name="login" value="Login">
                 <p style="margin-top: 0%;"></p>
                 <a class="signup">Sign up</a>
             </div>
@@ -131,7 +132,7 @@
             <div class="container">
                 <div class="row">
                     <div class="position  embed-responsive embed-responsive-16by9 centered-thing">
-                        <iframe id='auditoriumVideo' width="560" height="315" src="<?= $av['video']; ?>; controls=0;"
+                        <iframe id='auditoriumVideo' width="560" height="315" src="<?= $av['video']; ?>?autoplay=1;"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -148,7 +149,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col" style="margin-top: 380px;">
-                        <a style="margin-left: 140px; opacity: 0%; font-size: 100px;" href="/booth">Hi!</a>
+                        <a style="margin-left: 140px; opacity: 0%; font-size: 100px;" href="/boothk">Hi!</a>
+                    </div>
+                    <div class="col" style="margin-top: 380px;">
+                        <a style="margin-left: 280px; opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
                     </div>
                 </div>
             </div>
@@ -200,7 +204,7 @@
                         Event Feedback
                         <div class="row">
                             <div class="colFeedback transboxFeedback">
-                                <form autocompolete="off" action="" method="post">
+                                <form autocomplete="off" action="" method="post">
                                     <p class="user-select-none">If you were running the event, what would you have done
                                         differently?</p>
                                     <input id="answer" autocomplete="off" type="text" name="answer1">
@@ -228,7 +232,7 @@
     <?php if (isset($_SESSION['logonUser'])) {
         if ($_SESSION['logonUser'] == 'aktif') { ?>
     <script>
-    // $('#bgBlur').css('filter', 'none').fadeIn(1000);
+    $('#bgBlur').css('filter', 'none').fadeIn(1000);
     $('#loginCard').fadeOut(600);
     $('#nav').fadeIn(600);
 
