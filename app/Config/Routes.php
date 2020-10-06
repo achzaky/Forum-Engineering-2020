@@ -36,6 +36,7 @@ $routes->get('/booth/(:any)', 'Booth::index/$1');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/boothk', 'Booth::boothK');
 $routes->get('/boothb', 'Booth::boothB');
+$routes->get('/boothw', 'Booth::boothW');
 
 /**
  * --------------------------------------------------------------------
