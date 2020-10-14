@@ -115,6 +115,12 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.wrapper-bg-boothW {
+  background-image: url("../photos/WIKA.jpg");
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
 .logoSponsor {
   background-image: url("../photos/mandiri.png");
@@ -125,7 +131,7 @@ body {
 
 .navbar-brand {
   font-family: "Poppins", cursive;
-  font-size: 30px;
+  font-size: 28px;
 }
 .navbar-nav {
   margin-left: 40px;
@@ -156,7 +162,11 @@ body {
   width: 21%;
   height: 60%;
   background-color: rgb(0, 0, 0); /* Fallback color */
+<<<<<<< Updated upstream
   background-color: rgba(0, 0, 0, 0.75); /* Black w/opacity/see-through */
+=======
+  background-color: rgba(0, 0, 0, 0.705); /* Black w/opacity/see-through */
+>>>>>>> Stashed changes
   color: black;
   top: 50%;
   left: 50%;
@@ -229,7 +239,12 @@ body {
 border-radius: 10px;
   margin-top: 20px;
   background-color: black;
+<<<<<<< Updated upstream
   opacity: 0.50;
+=======
+  opacity: 0.75;
+  border-radius: 10px;
+>>>>>>> Stashed changes
 }
 
 .transbox p {
@@ -350,8 +365,8 @@ h1{
 iframe {
   display: block;
   margin: 0 auto;
-  width: 138px;
-    height: 95px;
+  width: 28.2%;
+    height: 14.8vh;
     border-top-width: 0px;
     border-right-width: 0px;
     border-bottom-width: 0px;
@@ -360,11 +375,10 @@ iframe {
 
 .centered-thing {
   position: absolute;
-  margin-top: 26%;
-  margin-left: 2px;
+  margin-top: 11.5%;
+  margin-left: -28.7%;
   top: 38%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .centered-things {
@@ -376,8 +390,8 @@ iframe {
 }
 .position {
   -ms-flex: 0 0 46.666667%;
-  flex: 0 0 55.666667%;
-  max-width: 55.666667%;
+  flex: 0 0 57.666667%;
+  max-width: 57.666667%;
   position: relative;
   width: 100%;
   padding-right: 15px;
