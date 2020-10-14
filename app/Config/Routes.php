@@ -37,6 +37,9 @@ $routes->get('/admin', 'Admin::index');
 $routes->get('/boothk', 'Booth::boothK');
 $routes->get('/boothb', 'Booth::boothB');
 $routes->get('/boothw', 'Booth::boothW');
+$routes->post('/sendChat', 'ChatSystem::sendChat');
+$routes->get('/loadChat', 'ChatSystem::loadChat');
+$routes->get('/chat', 'ChatSystem::index');
 
 /**
  * --------------------------------------------------------------------
