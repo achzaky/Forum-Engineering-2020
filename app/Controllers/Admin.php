@@ -41,7 +41,7 @@ class Admin extends BaseController
 
         $vidCode = preg_replace(
             "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
-            "//www.youtube.com/embed/$2",
+            "//www.youtube.com/embed/$2?autoplay=1",
             $this->request->getVar('sponsorVideo')
         );
 

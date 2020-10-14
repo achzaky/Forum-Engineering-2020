@@ -47,6 +47,7 @@ class Pages extends BaseController
             return redirect()->to('/pages');
         } else {
             $_SESSION['logonUser'] = 'aktif';
+            $_SESSION['username'] = $userData[0]['name'];
             return redirect()->to('/pages');
         }
     }

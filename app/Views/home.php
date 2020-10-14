@@ -130,9 +130,9 @@
     <div id='auditorium' class='wrapper'>
         <div class="wrapper-bg-auditorium">
             <div class="container">
-                <div class="row">
+                <div style="height: 100vh;">
                     <div class="position  embed-responsive embed-responsive-16by9 centered-thing">
-                        <iframe id='auditoriumVideo' width="560" height="315" src="<?= $av['video']; ?>?autoplay=1;"
+                        <iframe id='auditoriumVideo' src="<?= $av['video']; ?>"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -147,7 +147,7 @@
     <div id='exhibition' class='wrapper'>
         <div class="wrapper-bg-exhibition">
             <div class="container">
-                <div class="row">
+                <div class="col">
                     <div class="col" style="margin-top: 380px;">
                         <a style="margin-left: 140px; opacity: 0%; font-size: 100px;" href="/boothk">Hi!</a>
                     </div>
@@ -159,7 +159,7 @@
         </div>
     </div>
 
-    <!-- Unknown -->
+    <!-- Data Center -->
     <div id='unknown' class='wrapper'>
         <div class="wrapper-bg-unknown">
             <div class="container">
@@ -178,6 +178,30 @@
     <!-- Connection Area -->
     <div id='connectionArea' class='wrapper'>
         <div class="wrapper-bg-connectionArea">
+            <div class="transboxChat colChat">
+                <div id="chat_body">
+                    <div class="chatMessage">
+                        <div class="sender">
+
+                            <p><span>Name:</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                                dolore.</p>
+                        </div>
+                    </div>
+                    <div class="chatMessage">
+                        <div class="receiver">
+                            <p><span>Name:</span><br>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="userChat">
+                    <!-- <div class="col-9"> -->
+                    <input id="chatMessage" class="col-9" type="text">
+                    <!-- </div> -->
+                    <a id="sendChat" href="#" class="col-3">
+                        Send
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -250,6 +274,117 @@
     } ?>
 
     <script>
+    $(document).ready(function() {
+        $('#chatMessage').keypress(function() {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                var chatMessage = $('#chatMessage').val();
+                console.log(chatMessage);
+                $.ajax({
+                    url: "/sendChat",
+                    type: "POST",
+                    contentType: "json",
+                    data: JSON.stringify({
+                        chatMessage: chatMessage
+                    }),
+                    success: function(data) {
+                        $('#chatMessage').val("");
+                        console.log('AJAX SUCCESS');
+                        console.log(data);
+                        // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
+                        var height = 0;
+                        height += parseInt($('#chat_body')[0].scrollHeight);
+                        $('div').animate({
+                            scrollTop: height
+                        })
+                        $('#chatMessage').focus();
+                    }
+                })
+            }
+        })
+
+        $('#sendChat').click(function() {
+            var chatMessage = $('#chatMessage').val();
+            console.log(chatMessage);
+            $.ajax({
+                url: "/sendChat",
+                type: "POST",
+                contentType: "json",
+                data: JSON.stringify({
+                    chatMessage: chatMessage
+                }),
+                success: function(data) {
+                    $('#chatMessage').val("");
+                    console.log('AJAX SUCCESS');
+                    console.log(data);
+                    // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
+                    var height = 0;
+                    height += parseInt($('#chat_body')[0].scrollHeight);
+                    $('div').animate({
+                        scrollTop: height
+                    })
+                    $('#chatMessage').focus();
+                }
+            })
+        });
+
+
+        // Scroll to bottom of the chat
+        // var height = 0;
+        // $('#chat_body .chatMessage').each(function(i, value) {
+        //     height += parseInt($(this).height());
+        // });
+
+        // height += '';
+
+        // setInterval(function() {
+        //     console.log(height);
+        //     $('div').animate({
+        //         scrollTop: height
+        //     });
+        // }, 5000);
+
+        //------------------------------------------------
+
+        setInterval(function() {
+            loadChat();
+        }, 5000);
+
+        function loadChat() {
+            // console.log(username);
+            $.ajax({
+                url: "/loadChat",
+                type: "GET",
+                contentType: "json",
+                success: function(data) {
+                    data = JSON.parse(data);
+                    console.log(data);
+                    var html = '';
+                    for (var count = 0; count < data.length; count++) {
+                        if (data[count].messageDirection == 'right') {
+                            html +=
+                                '<div class="chatMessage"> <div class ="sender"><p><span>You:</span><br> ' +
+                                data[
+                                    count].chatMessage + ' </p> </div> </div>'
+                        } else if (data[count].messageDirection == 'left') {
+                            html += '<div class="chatMessage"> <div class = "receiver" ><p><span>' +
+                                data[count].username + ':</span><br> ' +
+                                data[count].chatMessage + ' </p> </div> </div>'
+                        }
+                    }
+                    $('#chat_body').html(html);
+                    var height = 0;
+                    height += parseInt($('#chat_body')[0].scrollHeight);
+                    console.log($('div').scrollTop());
+                    $('div').animate({
+                        scrollTop: height
+                    })
+
+                }
+            })
+        }
+    })
+
     $(document).ready(function() {
         $('#lobby').fadeIn();
         $('#auditorium').fadeOut();
