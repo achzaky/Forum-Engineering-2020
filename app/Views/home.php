@@ -96,6 +96,7 @@
         </div>
     </form>
 
+
     <!-- Login and lobby -->
     <div id='lobby' class='wrapper'>
         <div class="wrapper-bg-lobby">
@@ -120,23 +121,18 @@
         </div>
     </div>
 
-    </div>
-    </form>
-
 
     <?php foreach ($audvid as $av) : ?>
     <!-- AUDITORIUM -->
     <div id='auditorium' class='wrapper'>
         <div class="wrapper-bg-auditorium">
-            <div class="container">
-                <div style="height: 100vh;">
-                    <div class="position  embed-responsive embed-responsive-16by9 centered-thing">
-                        <iframe id='auditoriumVideo' src="<?= $av['video']; ?>"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
+            <!-- <div class="container"> -->
+            <div class="position embed-responsive embed-responsive-16by9 centered-thing">
+                <iframe id='auditoriumVideo' src="<?= $av['video']; ?>"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
+            <!-- </div> -->
         </div>
     </div>
     <?php endforeach; ?>
@@ -145,506 +141,522 @@
     <!-- Exhibition -->
     <div id='exhibition' class='wrapper'>
         <div class="wrapper-bg-exhibition">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col" style="margin-top: 20%; margin-left: 20%;">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 13%">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 2%">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 1%">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 0%;">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 0%;">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 0;">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 0;">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
-                    <div class="col" style="margin-top: 20%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 45px;" href="/boothk">Hi!</a>
+                    <div class="col" style="margin-top: 14%; margin-left: 0;">
+                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
                     </div>
                     <div class="row">
-                        <div class="col" style="margin-top: 10%; margin-left:-3%; margin-right: -10%">
+                        <div class="col" style="margin-top: 0%; margin-left: 10%; margin-right: -10%">
                             <a style="opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
                         </div>
-                        <div class="col" style="margin-top: 10%; margin-left: 7%; margin-right: -10%">
+                        <div class="col" style="margin-top: 0%; margin-left: 7%; margin-right: -10%">
                             <a style=" opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 5%; margin-left: 22%; margin-right: -10%">
                             <a style=" opacity: 0%; font-size: 100px; margin-left: 10%" href="/boothw">Hi!</a>
                         </div>
-                        <div class="col" style="margin-top: 10%; margin-left: 20%; margin-right: -10%">
+                        <div class="col" style="margin-top: 0%; margin-left: 20%; margin-right: -10%">
                             <a style=" opacity: 0%; font-size: 100px; margin-left: 35%" href="/boothb">Hi!</a>
                         </div>
-                        <div class="col" style="margin-top: 10%; margin-left: 1%; margin-right: -50%">
+                        <div class="col" style="margin-top: 0%; margin-left: 1%; margin-right: -50%">
                             <a style=" opacity: 0%; font-size: 100px; margin-left: 60%" href="/boothb">Hi!</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-top: 20%; margin-left:-108%; margin-right: -10%">
+                            <a style="opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                        </div>
+                        <div class="col" style="margin-top: 20%; margin-left: 0%; margin-right: -10%">
+                            <a style=" opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                        </div>
+                        <div class="col" style="margin-top: 20%; margin-left: 70%; margin-right: -10%">
+                            <a style="opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                        </div>
+                        <div class="col" style="margin-top: 20%; margin-left: 0%; margin-right: 7%">
+                            <a style=" opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Data Center -->
-        <div id='unknown' class='wrapper'>
-            <div class="wrapper-bg-unknown">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9 embed-responsive embed-responsive-16by9 centered-things">
-                            <iframe width="600" height="338"
-                                src="https://datastudio.google.com/embed/reporting/74e5ebb4-e21c-4dbb-83aa-97456a4e8c39/page/iy7dB"
-                                frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
+    <!-- Data Center -->
+    <!-- <div id='unknown' class='wrapper'>
+        <div class="wrapper-bg-unknown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 embed-responsive embed-responsive-16by9 centered-things">
+                        <iframe width="600" height="338"
+                            src="https://datastudio.google.com/embed/reporting/74e5ebb4-e21c-4dbb-83aa-97456a4e8c39/page/iy7dB"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
+        </div>
+    </div> -->
 
 
-            <!-- Connection Area -->
-            <div id='connectionArea' class='wrapper'>
-                <div class="wrapper-bg-connectionArea">
-                    <div class="transboxChat colChat">
-                        <div id="chat_body">
-                            <div class="chatMessage">
-                                <div class="sender">
+    <!-- Connection Area -->
+    <div id='connectionArea' class='wrapper'>
+        <div class="wrapper-bg-connectionArea">
+            <div class="transboxChat colChat">
+                <div id="chat_body">
+                    <div class="chatMessage">
+                        <div class="sender">
 
-                                    <p><span>Name:</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Odio,
-                                        dolore.</p>
-                                </div>
-                            </div>
-                            <div class="chatMessage">
-                                <div class="receiver">
-                                    <p><span>Name:</span><br>Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </div>
+                            <p><span>Name:</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Odio,
+                                dolore.</p>
                         </div>
-                        <div class="userChat">
-                            <!-- <div class="col-9"> -->
-                            <input id="chatMessage" class="col-9" type="text">
-                            <!-- </div> -->
-                            <a id="sendChat" href="#" class="col-3">
-                                Send
-                            </a>
+                    </div>
+                    <div class="chatMessage">
+                        <div class="receiver">
+                            <p><span>Name:</span><br>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
                 </div>
+                <div class="userChat">
+                    <input id="chatMessage" class="col-9" type="text">
+                    <a id="sendChat" href="#" class="col-3">
+                        Send
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                <!-- Resource Center -->
-                <!-- <div id='resourceCenter' class='wrapper'>
+    <!-- Resource Center -->
+    <!-- <div id='resourceCenter' class='wrapper'>
         <div class="wrapper-bg-resource"></div>
     </div> -->
 
 
-                <!-- About -->
-                <!-- <div id='about' class='wrapper'>
+    <!-- About -->
+    <!-- <div id='about' class='wrapper'>
         <div class="wrapper-bg-about"></div>
     </div> -->
 
 
-                <!-- Event Feedback -->
-                <div id='eventFeedback' class='wrapper'>
-                    <div class="wrapper-bg-feedback">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col"
-                                    style="font-size: 60px; text-align: center; font-family: Poppins, cursive; font-weight: bold; color: white; margin-top: 50px;">
-                                    Event Feedback
-                                    <div class="row">
-                                        <div class="colFeedback transboxFeedback">
-                                            <form autocomplete="off" action="" method="post">
-                                                <p class="user-select-none">If you were running the event, what would
-                                                    you have
-                                                    done
-                                                    differently?</p>
-                                                <input id="answer" autocomplete="off" type="text" name="answer1">
-                                                <p class="user-select-none">Any suggestions for future event topics?</p>
-                                                <input id="answer" autocomplete="off" type="text" name="answer2">
-                                                <p class="user-select-none">What did you like most about the event?</p>
-                                                <input id="answer" autocomplete="off" type="text" name="answer2">
-                                                <p class="user-select-none">What did you like least about the event?</p>
-                                                <input id="answer" autocomplete="off" type="text" name="answer2">
-                                                <p class="user-select-none">How do you think this event could have been
-                                                    improved?
-                                                </p>
-                                                <input id="answer" autocomplete="off" type="text" name="answer2">
-                                                <input type="submit" name="submitFeedback" value="Submit Feedback">
-                                        </div>
-                                        </form>
-                                    </div>
-                                </div>
+    <!-- Event Feedback -->
+    <div id='eventFeedback' class='wrapper'>
+        <div class="wrapper-bg-feedback">
+            <div class="container">
+                <div class="row">
+                    <div class="col"
+                        style="font-size: 3.75em; text-align: center; font-family: Poppins, cursive; font-weight: bold; color: white; margin-top: 50px;">
+                        Event Feedback
+                        <div class="row">
+                            <div class="colFeedback transboxFeedback">
+                                <form autocomplete="off" action="" method="post">
+                                    <p class="user-select-none">If you were running the event, what would
+                                        you have
+                                        done
+                                        differently?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer1">
+                                    <p class="user-select-none">Any suggestions for future event topics?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <p class="user-select-none">What did you like most about the event?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <p class="user-select-none">What did you like least about the event?</p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <p class="user-select-none">How do you think this event could have been
+                                        improved?
+                                    </p>
+                                    <input id="answer" autocomplete="off" type="text" name="answer2">
+                                    <input type="submit" name="submitFeedback" value="Submit Feedback">
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
 
-                <!-- Fade out login form -->
-                <?php if (isset($_SESSION['logonUser'])) {
+    <!-- Fade out login form -->
+    <?php if (isset($_SESSION['logonUser'])) {
         if ($_SESSION['logonUser'] == 'aktif') { ?>
-                <script>
-                $('#bgBlur').css('filter', 'none').fadeIn(1000);
-                $('#loginCard').fadeOut(600);
-                $('#nav').fadeIn(600);
+    <script>
+    $('#bgBlur').css('filter', 'none').fadeIn(1000);
+    $('#loginCard').fadeOut(600);
+    $('#nav').fadeIn(600);
 
-                <
-                script >
-                    $(document).ready(function() {
-                        $('#chatMessage').keypress(function() {
-                            var keycode = (event.keyCode ? event.keyCode : event.which);
-                            if (keycode == '13') {
-                                var chatMessage = $('#chatMessage').val();
-                                console.log(chatMessage);
-                                $.ajax({
-                                    url: "/sendChat",
-                                    type: "POST",
-                                    contentType: "json",
-                                    data: JSON.stringify({
-                                        chatMessage: chatMessage
-                                    }),
-                                    success: function(data) {
-                                        $('#chatMessage').val("");
-                                        console.log('AJAX SUCCESS');
-                                        console.log(data);
-                                        // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
-                                        var height = 0;
-                                        height += parseInt($('#chat_body')[0].scrollHeight);
-                                        $('div').animate({
-                                            scrollTop: height
-                                        })
-                                        $('#chatMessage').focus();
-                                    }
-                                })
-                            }
-                        })
-
-                        $('#sendChat').click(function() {
-                            var chatMessage = $('#chatMessage').val();
-                            console.log(chatMessage);
-                            $.ajax({
-                                url: "/sendChat",
-                                type: "POST",
-                                contentType: "json",
-                                data: JSON.stringify({
-                                    chatMessage: chatMessage
-                                }),
-                                success: function(data) {
-                                    $('#chatMessage').val("");
-                                    console.log('AJAX SUCCESS');
-                                    console.log(data);
-                                    // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
-                                    var height = 0;
-                                    height += parseInt($('#chat_body')[0].scrollHeight);
-                                    $('div').animate({
-                                        scrollTop: height
-                                    })
-                                    $('#chatMessage').focus();
-                                }
-                            })
-                        });
-
-
-                        // Scroll to bottom of the chat
-                        // var height = 0;
-                        // $('#chat_body .chatMessage').each(function(i, value) {
-                        //     height += parseInt($(this).height());
-                        // });
-
-                        // height += '';
-
-                        // setInterval(function() {
-                        //     console.log(height);
-                        //     $('div').animate({
-                        //         scrollTop: height
-                        //     });
-                        // }, 5000);
-
-                        //------------------------------------------------
-
-                        setInterval(function() {
-                            loadChat();
-                        }, 5000);
-
-                        function loadChat() {
-                            // console.log(username);
-                            $.ajax({
-                                url: "/loadChat",
-                                type: "GET",
-                                contentType: "json",
-                                success: function(data) {
-                                    data = JSON.parse(data);
-                                    console.log(data);
-                                    var html = '';
-                                    for (var count = 0; count < data.length; count++) {
-                                        if (data[count].messageDirection == 'right') {
-                                            html +=
-                                                '<div class="chatMessage"> <div class ="sender"><p><span>You:</span><br> ' +
-                                                data[
-                                                    count].chatMessage + ' </p> </div> </div>'
-                                        } else if (data[count].messageDirection == 'left') {
-                                            html +=
-                                                '<div class="chatMessage"> <div class = "receiver" ><p><span>' +
-                                                data[count].username + ':</span><br> ' +
-                                                data[count].chatMessage + ' </p> </div> </div>'
-                                        }
-                                    }
-                                    $('#chat_body').html(html);
-                                    var height = 0;
-                                    height += parseInt($('#chat_body')[0].scrollHeight);
-                                    console.log($('div').scrollTop());
-                                    $('div').animate({
-                                        scrollTop: height
-                                    })
-
-                                }
-                            })
-                        }
-                    })
-
-                $(document).ready(function() {
-                    $('#lobby').fadeIn();
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#unknown').fadeOut();
-                });
-
-                $("#navAuditorium").click(function() {
-                            $('#auditoriumVideo')[0].src += "&autoplay=1";
-                            // ev.preventDefault();
-                            $('#auditorium').fadeIn();
-                            $('#about').fadeOut();
-                            $('#eventFeedback').fadeOut();
-                            $('#exhibition').fadeOut();
-                            $('#connectionArea').fadeOut();
-                            $('#resourceCenter').fadeOut();
-                            $('#lobby').fadeOut();
-                            $('#registration').fadeOut();
-                            $('#lobby').fadeIn();
-                            $('#auditorium').fadeOut();
-                            $('#about').fadeOut();
-                            $('#eventFeedback').fadeOut();
-                            $('#exhibition').fadeOut();
-                            $('#connectionArea').fadeOut();
-                            $('#resourceCenter').fadeOut();
-                            $('#unknown').fadeOut();
-                </script>
-                <?php }
+    $('#registration').fadeOut();
+    $('#lobby').fadeIn();
+    $('#auditorium').fadeOut();
+    $('#about').fadeOut();
+    $('#eventFeedback').fadeOut();
+    $('#exhibition').fadeOut();
+    $('#connectionArea').fadeOut();
+    $('#resourceCenter').fadeOut();
+    $('#unknown').fadeOut();
+    </script>
+    <?php }
     } ?>
 
-                <script>
-                $(document).ready(function() {
-                    $('#lobby').fadeIn();
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#unknown').fadeOut();
-                });
+    <!-- Back from booth to exhibition -->
+    <?php if (isset($_SESSION['state'])) {
+        if ($_SESSION['state'] == 'exhibition') {
+    ?>
+    <script>
+    $('#auditorium').fadeOut();
+    $('#about').fadeOut();
+    $('#eventFeedback').fadeOut();
+    $('#exhibition').fadeIn();
+    $('#connectionArea').fadeOut();
+    $('#resourceCenter').fadeOut();
+    $('#lobby').fadeOut();
+    $('#registration').fadeOut();
+    $('#unknown').fadeOut();
+    </script>
+    <?php
+        }
+    } ?>
 
-                $("#navAuditorium").click(function() {
-                    $('#auditoriumVideo')[0].src += "&autoplay=1";
-                    // ev.preventDefault();
-                    $('#auditorium').fadeIn();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#lobby').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
+    <script>
+    $(document).ready(function() {
+        $(document).bind("contextmenu", function(e) {
+            return false;
+        });
+    });
+    $(document).ready(function() {
+        $('#chatMessage').keypress(function() {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                var chatMessage = $('#chatMessage').val();
+                console.log(chatMessage);
+                $.ajax({
+                    url: "/sendChat",
+                    type: "POST",
+                    contentType: "json",
+                    data: JSON.stringify({
+                        chatMessage: chatMessage
+                    }),
+                    success: function(data) {
+                        $('#chatMessage').val("");
+                        console.log('AJAX SUCCESS');
+                        console.log(data);
+                        // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
+                        var height = 0;
+                        height += parseInt($('#chat_body')[0].scrollHeight);
+                        $('div').animate({
+                            scrollTop: height
+                        })
+                        $('#chatMessage').focus();
+                    }
+                })
+            }
+        })
 
-                $("#navLobby").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
-
-
-                    $('#lobby').fadeIn();
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
-
-                $("#lCo").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
-
-
-                    $('#lobby').fadeOut();
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeIn();
-                    $('#resourceCenter').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
-
-                $("#lA").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
-
-
-                    $('#lobby').fadeOut();
-                    $('#auditorium').fadeIn();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
-
-                $("#lex1").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
+        $('#sendChat').click(function() {
+            var chatMessage = $('#chatMessage').val();
+            console.log(chatMessage);
+            $.ajax({
+                url: "/sendChat",
+                type: "POST",
+                contentType: "json",
+                data: JSON.stringify({
+                    chatMessage: chatMessage
+                }),
+                success: function(data) {
+                    $('#chatMessage').val("");
+                    console.log('AJAX SUCCESS');
+                    console.log(data);
+                    // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
+                    var height = 0;
+                    height += parseInt($('#chat_body')[0].scrollHeight);
+                    $('div').animate({
+                        scrollTop: height
+                    })
+                    $('#chatMessage').focus();
+                }
+            })
+        });
 
 
-                    $('#lobby').fadeOut();
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeIn();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
+        // Scroll to bottom of the chat
+        // var height = 0;
+        // $('#chat_body .chatMessage').each(function(i, value) {
+        //     height += parseInt($(this).height());
+        // });
 
-                $("#lex2").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
+        // height += '';
+
+        // setInterval(function() {
+        //     console.log(height);
+        //     $('div').animate({
+        //         scrollTop: height
+        //     });
+        // }, 5000);
+
+        //------------------------------------------------
+
+        setInterval(function() {
+            loadChat();
+        }, 5000);
+
+        function loadChat() {
+            // console.log(username);
+            $.ajax({
+                url: "/loadChat",
+                type: "GET",
+                contentType: "json",
+                success: function(data) {
+                    data = JSON.parse(data);
+                    console.log(data);
+                    var html = '';
+                    for (var count = 0; count < data.length; count++) {
+                        if (data[count].messageDirection == 'right') {
+                            html +=
+                                '<div class="chatMessage"> <div class ="sender"><p><span>You:</span><br> ' +
+                                data[
+                                    count].chatMessage + ' </p> </div> </div>'
+                        } else if (data[count].messageDirection == 'left') {
+                            html +=
+                                '<div class="chatMessage"> <div class = "receiver" ><p><span>' +
+                                data[count].username + ':</span><br> ' +
+                                data[count].chatMessage + ' </p> </div> </div>'
+                        }
+                    }
+                    $('#chat_body').html(html);
+                    var height = 0;
+                    height += parseInt($('#chat_body')[0].scrollHeight);
+                    console.log($('div').scrollTop());
+                    $('.wrapper-bg-connectionArea div').animate({
+                        scrollTop: height
+                    })
+
+                }
+            })
+        }
+    })
+
+    // $(document).ready(function() {
+    //     $('#lobby').fadeIn();
+    //     $('#auditorium').fadeOut();
+    //     $('#about').fadeOut();
+    //     $('#eventFeedback').fadeOut();
+    //     $('#exhibition').fadeOut();
+    //     $('#connectionArea').fadeOut();
+    //     $('#resourceCenter').fadeOut();
+    //     $('#unknown').fadeOut();
+    // });
+
+    $("#navAuditorium").click(function() {
+        $('#auditoriumVideo')[0].src += "&autoplay=1";
+        // ev.preventDefault();
+        $('#auditorium').fadeIn();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
+
+    $("#navLobby").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
 
 
-                    $('#lobby').fadeOut();
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeIn();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
+        $('#lobby').fadeIn();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
 
-                $("#navExhibition").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
+    $("#lCo").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
 
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeIn();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#lobby').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
 
-                $("#navUnknown").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeIn();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
 
-                    $('#auditorium').fadeOut();
-                    $('#unknown').fadeIn();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#lobby').fadeOut();
-                    $('#registration').fadeOut();
-                });
+    $("#lA").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
 
-                $("#navConnectionArea").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
 
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeOut();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeIn();
-                    $('#resourceCenter').fadeOut();
-                    $('#lobby').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeIn();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
 
-                // $("#navRC").click(function() {
-                //     var video = $('#auditoriumVideo').attr("src");
-                //     $('#auditoriumVideo').attr("src", "");
-                //     $('#auditoriumVideo').attr("src", video);
+    $("#lex1").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
 
-                //     $('#auditorium').fadeOut();
-                //     $('#about').fadeOut();
-                //     $('#eventFeedback').fadeOut();
-                //     $('#exhibition').fadeOut();
-                //     $('#connectionArea').fadeOut();
-                //     $('#resourceCenter').fadeIn();
-                //     $('#lobby').fadeOut();
-                //     $('#registration').fadeOut();
-                // });
 
-                $("#navEF").click(function() {
-                    var video = $('#auditoriumVideo').attr("src");
-                    $('#auditoriumVideo').attr("src", "");
-                    $('#auditoriumVideo').attr("src", video);
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
 
-                    $('#auditorium').fadeOut();
-                    $('#about').fadeOut();
-                    $('#eventFeedback').fadeIn();
-                    $('#exhibition').fadeOut();
-                    $('#connectionArea').fadeOut();
-                    $('#resourceCenter').fadeOut();
-                    $('#lobby').fadeOut();
-                    $('#registration').fadeOut();
-                    $('#unknown').fadeOut();
-                });
+    $("#lex2").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
 
-                // $("#navAbout").click(function() {
-                //     var video = $('#auditoriumVideo').attr("src");
-                //     $('#auditoriumVideo').attr("src", "");
-                //     $('#auditoriumVideo').attr("src", video);
 
-                //     $('#auditorium').fadeOut();
-                //     $('#about').fadeIn();
-                //     $('#eventFeedback').fadeOut();
-                //     $('#exhibition').fadeOut();
-                //     $('#connectionArea').fadeOut();
-                //     $('#resourceCenter').fadeOut();
-                //     $('#lobby').fadeOut();
-                // });
-                </script>
+        $('#lobby').fadeOut();
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
+
+    $("#navExhibition").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
+
+    $("#navUnknown").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+        $('#auditorium').fadeOut();
+        $('#unknown').fadeIn();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+    });
+
+    $("#navConnectionArea").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeIn();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
+
+    // $("#navRC").click(function() {
+    //     var video = $('#auditoriumVideo').attr("src");
+    //     $('#auditoriumVideo').attr("src", "");
+    //     $('#auditoriumVideo').attr("src", video);
+
+    //     $('#auditorium').fadeOut();
+    //     $('#about').fadeOut();
+    //     $('#eventFeedback').fadeOut();
+    //     $('#exhibition').fadeOut();
+    //     $('#connectionArea').fadeOut();
+    //     $('#resourceCenter').fadeIn();
+    //     $('#lobby').fadeOut();
+    //     $('#registration').fadeOut();
+    // });
+
+    $("#navEF").click(function() {
+        var video = $('#auditoriumVideo').attr("src");
+        $('#auditoriumVideo').attr("src", "");
+        $('#auditoriumVideo').attr("src", video);
+
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeIn();
+        $('#exhibition').fadeOut();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    });
+
+    // $("#navAbout").click(function() {
+    //     var video = $('#auditoriumVideo').attr("src");
+    //     $('#auditoriumVideo').attr("src", "");
+    //     $('#auditoriumVideo').attr("src", video);
+
+    //     $('#auditorium').fadeOut();
+    //     $('#about').fadeIn();
+    //     $('#eventFeedback').fadeOut();
+    //     $('#exhibition').fadeOut();
+    //     $('#connectionArea').fadeOut();
+    //     $('#resourceCenter').fadeOut();
+    //     $('#lobby').fadeOut();
+    // });
+    </script>
 </body>
