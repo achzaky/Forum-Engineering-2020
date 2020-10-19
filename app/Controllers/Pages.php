@@ -32,6 +32,8 @@ class Pages extends BaseController
         echo view('templates/header');
         echo view('home', $data);
         echo view('templates/footer');
+
+        $_SESSION['state'] = '';
     }
 
     public function login()

@@ -35,6 +35,7 @@ class Booth extends BaseController
 
     public function boothK()
     {
+        $_SESSION['state'] = 'exhibition';
         echo view('templates/header');
         echo view('boothK');
         echo view('templates/footer');
@@ -42,6 +43,7 @@ class Booth extends BaseController
 
     public function boothB()
     {
+        $_SESSION['state'] = 'exhibition';
         echo view('templates/header');
         echo view('boothB');
         echo view('templates/footer');
@@ -49,6 +51,7 @@ class Booth extends BaseController
 
     public function boothW()
     {
+        $_SESSION['state'] = 'exhibition';
         echo view('templates/header');
         echo view('boothW');
         echo view('templates/footer');
