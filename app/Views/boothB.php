@@ -73,8 +73,6 @@
                             <path fill-rule="evenodd"
                                 d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                         </svg>Event Feedback</a>
-
-
                 </div>
             </div>
         </nav>
@@ -82,21 +80,32 @@
 
     <div id='boothB' class='wrapper'>
         <div class="wrapper-bg-boothB">
-            <!-- <div class="container">
+            <div class="container">
                 <div class="row">
-                    <div class="col" style="margin-top: 101px;">
-                        <div class="logoSponsor" style="height: 43%; width: 11%; margin-left: 134px;"></div>
-                        <div class="vidSponsor" style="margin-top: 102px;">
-                            <iframe width="138" height="78" style="margin-left: 150px;"
+                    <div class="col" style="margin-top:11.8%; margin-left:19%">
+                        <img src="/assets/photos/mandiri.png" width="20%" height="100vh">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="vidSponsor" style="margin-top: 8%;">
+                            <iframe width="138" height="78" style="margin-left: 45.8%;"
                                 src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=1" frameborder="0"
                                 allowfullscreen></iframe>
                         </div>
+                        <div class="col" style="margin-top:-11%; margin-left:77.55%">
+                            <img src="/assets/photos/mandiri.png" id="modalButton" data-toggle="modal"
+                                data-target="#exampleModal" width="8%" height="220vh">
+                        </div>
                     </div>
-
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
+    <div id="manualModal" class="manualModal d-none">
+        <img src="/assets/photos/mandiri.png" alt="">
+    </div>
+
 
 
 
@@ -131,6 +140,15 @@
         $('#resourceCenter').fadeOut();
         $('#unknown').fadeOut();
     });
+    $("#modalButton").click(function() {
+        $("#manualModal").removeClass('d-none');
+        $("#nav").addClass('d-none');
+    })
+
+    $(".manualModal").click(function() {
+        $("#manualModal").addClass('d-none');
+        $("#nav").removeClass('d-none');
+    })
 
     $("#navAuditorium").click(function() {
         $('#auditoriumVideo')[0].src += "&autoplay=1";

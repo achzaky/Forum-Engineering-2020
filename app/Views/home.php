@@ -11,7 +11,7 @@
                 <div class="navbar-nav">
                     <!-- Menu dan icon pada navbar -->
                     <a id='navLobby' class="nav-link active">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor"
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
@@ -35,12 +35,12 @@
                                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                         </svg>Exhibition</a>
 
-                    <a id='navUnknown' class="nav-link active">
+                    <!-- <a id='navUnknown' class="nav-link active">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                        </svg>Data</a>
+                        </svg>Data</a> -->
 
                     <a id='navAuditorium' class="nav-link active">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tv-fill" fill="currentColor"
@@ -78,8 +78,8 @@
             </div>
         </nav>
     </div>
-
-    <form autocomplete="off" action="/pages/login" method="post">
+    <!-- Login with email -->
+    <form id="loginwithemail" autocomplete="off" action="/pages/login" method="post">
         <div id="registration" class="wrapper">
             <div id='bgBlur' class="wrapper-bg"></div>
             <div id='loginCard' class="loginPanel">
@@ -91,30 +91,47 @@
                 <input id="password" autocomplete="off" type="text" name="password" placeholder="Enter ID Peserta">
                 <input type="submit" autocomplete="off" name="login" value="Login">
                 <p style="margin-top: 0%;"></p>
-                <a class="signup">Sign up</a>
+                <a id="phonenumberbutton" class="sign up" href="#">Login with Phone Number</a>
             </div>
         </div>
     </form>
 
+    <!-- Login with PhoneNum -->
+    <form autocomplete="off" action="/pages/login" method="post">
+        <div id="registration" class="wrapper d-none loginwithphonenum">
+            <div id='bgBlur' class="wrapper-bg"></div>
+            <div id='loginCard' class="loginPanel">
+                <img src="/assets/photos/forenglogo.png" class="foto">
+                <h1 class="user-select-none">Welcome</h1>
+                <p class="user-select-none">Phone Number</p>
+                <input id="username" autocomplete="off" type="text" name="email" placeholder="Enter Phone Number">
+                <p class="user-select-none">ID Peserta</p>
+                <input id="password" autocomplete="off" type="text" name="password" placeholder="Enter ID Peserta">
+                <input type="submit" autocomplete="off" name="login" value="Login">
+                <p style="margin-top: 0%;"></p>
+                <a id="loginemailbutton" class="sign up" href="#">Login with E-mail</a>
+            </div>
+        </div>
+    </form>
 
     <!-- Login and lobby -->
     <div id='lobby' class='wrapper'>
         <div class="wrapper-bg-lobby">
             <div class="container">
                 <div class="row">
-                    <div class="col" style="margin-top: 280px;">
-                        <a id="lCo" style="margin-left: 40px; opacity: 0%; font-size: 60px;" href="#">HERE!</a>
+                    <div class="col" style="margin-top: 27%;">
+                        <a id="lCo" style="margin-left: -15%; opacity: 0%; font-size: 60px;" href="#">HERE!</a>
                     </div>
-                    <div class="col" style="margin-top: 300px;">
-                        <a id="lA" style="margin-left: 175px; opacity: 0%; font-size: 45px;" href="#">HERE!</a>
+                    <div class="col" style="margin-top: 27%;">
+                        <a id="lA" style="margin-left: 45%; opacity: 0%; font-size: 45px;" href="#">HERE!</a>
                         <div class="row">
-                            <div class="col" style="margin-left: -20px;">
+                            <div class="col" style="margin-left: -20%;">
                                 <a id="lex1" style="font-size: 65px; opacity: 0%;" href="#">HER</a>
                             </div>
                         </div>
                     </div>
                     <div class="col" style="margin-top: 370px;">
-                        <a id="lex2" style="margin-left: -10px; font-size: 40px; opacity: 0%;" href="#">HERE!</a>
+                        <a id="lex2" style="margin-left: -10px; font-size: 65px; opacity: 0%;" href="#">HER</a>
                     </div>
                 </div>
             </div>
@@ -144,58 +161,58 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col" style="margin-top: 14%; margin-left: 13%">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 2%">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 1%">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 0%;">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 0%;">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 0;">
-                        <a style="opacity: 0%; font-size: 60px;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
                     </div>
                     <div class="row">
                         <div class="col" style="margin-top: 0%; margin-left: 10%; margin-right: -10%">
-                            <a style="opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                            <a style="opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 0%; margin-left: 7%; margin-right: -10%">
-                            <a style=" opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                            <a style=" opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 5%; margin-left: 22%; margin-right: -10%">
-                            <a style=" opacity: 0%; font-size: 100px; margin-left: 10%" href="/boothw">Hi!</a>
+                            <a style=" opacity: 0%; font-size: 7.45vw; margin-left: 10%" href="/boothw">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 0%; margin-left: 20%; margin-right: -10%">
-                            <a style=" opacity: 0%; font-size: 100px; margin-left: 35%" href="/boothb">Hi!</a>
+                            <a style=" opacity: 0%; font-size: 7.45vw; margin-left: 35%" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 0%; margin-left: 1%; margin-right: -50%">
-                            <a style=" opacity: 0%; font-size: 100px; margin-left: 60%" href="/boothb">Hi!</a>
+                            <a style=" opacity: 0%; font-size: 7.45vw; margin-left: 60%" href="/boothb">Hi!</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col" style="margin-top: 20%; margin-left:-108%; margin-right: -10%">
-                            <a style="opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                            <a style="opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 20%; margin-left: 0%; margin-right: -10%">
-                            <a style=" opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                            <a style=" opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 20%; margin-left: 70%; margin-right: -10%">
-                            <a style="opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                            <a style="opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 20%; margin-left: 0%; margin-right: 7%">
-                            <a style=" opacity: 0%; font-size: 100px;" href="/boothb">Hi!</a>
+                            <a style=" opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
                         </div>
                     </div>
                 </div>
@@ -456,16 +473,6 @@
         }
     })
 
-    // $(document).ready(function() {
-    //     $('#lobby').fadeIn();
-    //     $('#auditorium').fadeOut();
-    //     $('#about').fadeOut();
-    //     $('#eventFeedback').fadeOut();
-    //     $('#exhibition').fadeOut();
-    //     $('#connectionArea').fadeOut();
-    //     $('#resourceCenter').fadeOut();
-    //     $('#unknown').fadeOut();
-    // });
 
     $("#navAuditorium").click(function() {
         $('#auditoriumVideo')[0].src += "&autoplay=1";
@@ -497,6 +504,16 @@
         $('#registration').fadeOut();
         $('#unknown').fadeOut();
     });
+
+    $("#phonenumberbutton").click(function() {
+        $("#loginwithemail").addClass('d-none');
+        $(".loginwithphonenumber").removeClass('d-none');
+    })
+
+    $("#loginemailbutton").click(function() {
+        $(".loginwithphonenumber").addClass('d-none');
+        $("#logiwithemail").removeClass('d-none');
+    })
 
     $("#lCo").click(function() {
         var video = $('#auditoriumVideo').attr("src");
@@ -582,21 +599,21 @@
         $('#unknown').fadeOut();
     });
 
-    $("#navUnknown").click(function() {
-        var video = $('#auditoriumVideo').attr("src");
-        $('#auditoriumVideo').attr("src", "");
-        $('#auditoriumVideo').attr("src", video);
+    // $("#navUnknown").click(function() {
+    //     var video = $('#auditoriumVideo').attr("src");
+    //     $('#auditoriumVideo').attr("src", "");
+    //     $('#auditoriumVideo').attr("src", video);
 
-        $('#auditorium').fadeOut();
-        $('#unknown').fadeIn();
-        $('#about').fadeOut();
-        $('#eventFeedback').fadeOut();
-        $('#exhibition').fadeOut();
-        $('#connectionArea').fadeOut();
-        $('#resourceCenter').fadeOut();
-        $('#lobby').fadeOut();
-        $('#registration').fadeOut();
-    });
+    //     $('#auditorium').fadeOut();
+    //     $('#unknown').fadeIn();
+    //     $('#about').fadeOut();
+    //     $('#eventFeedback').fadeOut();
+    //     $('#exhibition').fadeOut();
+    //     $('#connectionArea').fadeOut();
+    //     $('#resourceCenter').fadeOut();
+    //     $('#lobby').fadeOut();
+    //     $('#registration').fadeOut();
+    // });
 
     $("#navConnectionArea").click(function() {
         var video = $('#auditoriumVideo').attr("src");
