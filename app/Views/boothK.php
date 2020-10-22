@@ -84,16 +84,21 @@
         <div class="wrapper-bg-boothK">
             <div class="container">
                 <div class="row">
-                    <div class="col vidSponsor" style="margin-top: 33.11%;">
-                        <iframe style="margin-left: 58.5%;" src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=1"
-                            frameborder="0" allowfullscreen></iframe>
+                    <div class="col">
+                        <div class="vidSponsor" style="margin-top: 73.5%;margin-left: 61%;">
+                            <iframe style="width:100%; height:17.6vh;"
+                                src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=1" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
-
-                    <div class="col" style="margin-top: 380px;">
-                        <button id="modalButton" type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Launch demo modal
-                        </button>
+                    <div class="col" style="margin-top:10%; margin-left:20%">
+                        <img src="/assets/photos/mandiri.png" width="50%" height="100vh">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="margin-top:-11.8%; margin-left:65.92%">
+                        <img src="/assets/photos/mandiri.png" id="modalButton" data-toggle="modal"
+                            data-target="#exampleModal" width="27.2%" height="255vh">
                     </div>
                 </div>
             </div>
@@ -106,8 +111,9 @@
 
 
 
+
     <?php if (isset($_SESSION['logonUser'])) {
-        if ($_SESSION['logonUser'] == 'aktif') { ?>
+            if ($_SESSION['logonUser'] == 'aktif') { ?>
     <script>
     // $('#bgBlur').css('filter', 'none').fadeIn(1000);
     $('#loginCard').fadeOut(600);
@@ -124,7 +130,7 @@
     $('#unknown').fadeOut();
     </script>
     <?php }
-    } ?>
+        } ?>
 
     <script>
     $(document).ready(function() {
@@ -139,13 +145,11 @@
     });
 
     $("#modalButton").click(function() {
-        console.log('CLICKED')
         $("#manualModal").removeClass('d-none');
         $("#nav").addClass('d-none');
     })
 
     $(".manualModal").click(function() {
-        console.log('CLICKED')
         $("#manualModal").addClass('d-none');
         $("#nav").removeClass('d-none');
     })
@@ -271,10 +275,10 @@
         $('#auditoriumVideo').attr("src", video);
 
         $('#auditorium').fadeOut();
-        $('#unknown').fadeIn();
+        $('#unknown').fadeOut();
         $('#about').fadeOut();
         $('#eventFeedback').fadeOut();
-        $('#exhibition').fadeOut();
+        $('#exhibition').fadeIn();
         $('#connectionArea').fadeOut();
         $('#resourceCenter').fadeOut();
         $('#lobby').fadeOut();

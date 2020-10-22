@@ -61,7 +61,7 @@ body {
 }
 
 .wrapper-bg-exhibition {
-  background-image: url("../photos/ALL_01.jpg");
+  background-image: url("../photos/ALL\ 03.jpg");
   height: 100%;
   background-size: 100%;
 }
@@ -74,10 +74,10 @@ body {
 
 .wrapper-bg-auditorium {
   background-image: url("../photos/auditorium.png");
-  background-position: 0% 25%;
   height: 100%;
   background-size: 100%;
   display: flex;
+  background-position: 0% 25%;
   justify-content: center;
 }
 
@@ -106,21 +106,21 @@ body {
 }
 
 .wrapper-bg-boothK {
-  background-image: url("../photos/1.png");
+  background-image: url("../photos/50\ 02.jpg");
   height: 100%;
   background-size: 100%;
 }
 
 .wrapper-bg-boothB {
-  background-image: url("../photos/2.png");
+  background-image: url("../photos/boothb.jpg");
   height: 100%;
   background-size: 100%;
-  background-repeat: no-repeat;
 }
 .wrapper-bg-boothW {
-  background-image: url("../photos/WIKA.jpg");
+  background-image: url("../photos/boothwika.jpg");
   height: 100%;
   background-size: 100%;
+  background-position: 0% 50%;
   background-repeat: no-repeat;
 }
 
@@ -366,12 +366,22 @@ iframe {
   border-left-width: 0px;
 }
 
+iframe .ibk {
+  display: block;
+  margin: 0 auto;
+  width: 42.2%;
+  height: 14.8vh;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+}
+
 .centered-thing {
   position: absolute;
   /* margin-top: 18%; */
   /* margin-left: -28.7%; */
   top: 29%;
-  left: 56%;
 }
 
 .centered-things {
@@ -587,7 +597,7 @@ input[type="answer"] {
 }
 
 /* width */
-.colChat::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.5vw;
 }
 
