@@ -17,7 +17,12 @@ class SponsorModel extends Model
         'brosur',
         'sponsor_banner',
         'sponsor_logo',
-        'sponsor_background',
-        'sponsor_nameDisplay'
     ];
+    public function getSponsor($description = false)
+    {
+        if ($description == false) {
+            return $this->findAll();
+        }
+        return $this->where(['description' => $description])->first();
+    }
 }
