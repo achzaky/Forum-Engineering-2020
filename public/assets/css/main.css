@@ -109,12 +109,19 @@ body {
   background-image: url("../photos/50\ 02.jpg");
   height: 100%;
   background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .wrapper-bg-boothB {
   background-image: url("../photos/boothb.jpg");
   height: 100%;
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .wrapper-bg-boothW {
   background-image: url("../photos/boothwika.jpg");
@@ -122,6 +129,8 @@ body {
   background-size: 100%;
   background-position: 0% 50%;
   background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .logoSponsor {
@@ -409,14 +418,13 @@ iframe .ibk {
   padding-right: 15px;
   padding-left: 15px;
 }
+
 .vidSponsor {
   -ms-flex: 0 0 46.666667%;
   flex: 0 0 55.666667%;
   max-width: 55.666667%;
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .aboutHeader {
@@ -648,4 +656,87 @@ input[type="answer"] {
 .manualModal img {
   z-index: 5;
   position: absolute;
+  height: 95vh;
+}
+
+.boothK_logo {
+  height: 5vw;
+  position: fixed;
+}
+
+.boothK_banner {
+  width: 7vw;
+}
+
+.boothK_video {
+  width: 16vw;
+  height: 9vw;
+}
+
+.boothB_video {
+  margin-left: 30.3vw;
+  width: 12vw;
+  height: 7vw;
+}
+
+.boothB_logo {
+  height: 6vw;
+}
+
+.boothB_banner {
+  width: 7vw;
+}
+
+.boothW_video {
+  margin-left: -7.5vw;
+  width: 10vw;
+  height: 5.6vw;
+}
+
+.boothW_logo {
+  height: 7vw;
+}
+
+.boothW_banner {
+  width: 5vw;
+}
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .boothB_video {
+    margin-left: 20.3vw;
+    width: 12vw;
+    height: 7vw;
+  }
+} */
+
+#text {
+  z-index: 1;
+}
+
+#image {
+  z-index: -1;
+}
+.textModal {
+  font-family: "Poppins", cursive;
+  font-size: 3vh;
+  color: #ccc;
+  margin-top: -45vh;
+  margin-left: 40vw;
+}
+
+.modalButton {
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", cursive;
+  font-size: 2vh;
+  color: rgb(0, 0, 0);
+  margin-top: -30vh;
+  margin-left: -15vw;
+  border-radius: 8%;
+}
+.modalButton:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  background: green;
+  color: white;
 }

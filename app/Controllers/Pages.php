@@ -91,6 +91,7 @@ class Pages extends BaseController
             $_SESSION['username'] = $userData[0]['name'];
             $_SESSION['email'] =
                 $userData[0]['email'];
+            $_SESSION['id_peserta'] = $userData[0]['id_peserta'];
             return redirect()->to('/pages');
         }
     }

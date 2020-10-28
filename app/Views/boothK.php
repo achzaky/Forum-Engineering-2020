@@ -35,9 +35,9 @@
                                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                         </svg>Exhibition</a>
 
-                    <a id='navUnknown' class="nav-link active" style="font-size:20px; margin-left: 90px;" href="/pages">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill"
-                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <a id='navUnknown' class="nav-link active" style="font-size:1.3vw; margin-left: 7vw;" href="/pages">
+                        <svg width="2vw" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z" />
                         </svg>Back</a>
@@ -82,30 +82,35 @@
 
     <div id='boothK' class='wrapper'>
         <div class="wrapper-bg-boothK">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="vidSponsor" style="margin-top: 73.5%;margin-left: 61%;">
-                            <iframe style="width:100%; height:17.6vh;"
-                                src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=1" frameborder="0"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col" style="margin-top:10%; margin-left:20%">
-                        <img src="/assets/photos/mandiri.png" width="50%" height="100vh">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" style="margin-top:-11.8%; margin-left:65.92%">
-                        <img src="/assets/photos/mandiri.png" id="modalButton" data-toggle="modal"
-                            data-target="#exampleModal" width="27.2%" height="255vh">
-                    </div>
+            <?php foreach ($sponsorData as $sd) : ?>
+            <div class="row">
+                <div class="col" style="margin-top:9.8vw; margin-left:58vw">
+                    <img src="/assets/photos/sponsor/logo/<?= $sd['sponsor_logo']; ?>" class="boothK_logo">
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <div class="vidSponsor" style="margin-top: 26vh; padding-left: 2vw; margin-left: 27vw;">
+                        <iframe class="boothK_video" src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=1"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col">
+                    <img style="margin-top: 11.7vw; margin-left: 13.3vw"
+                        src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" id="modalButton"
+                        data-toggle="modal" data-target="#exampleModal" class="boothK_banner">
+                </div>
+            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div id="manualModal" class="manualModal d-none">
-        <img src="/assets/photos/mandiri.png" alt="">
+        <img src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" alt="">
+        <p id="text" class="textModal"> For more info contact via Whatsapp<br>or visit the website by<br>click the
+            button below
+        </p>
+        <a class="modalButton btn" href="#" role="button">Whatsapp</a>
+        <a class="modalButton btn" href="www.wikaserangpanimbang.com" role="button">Website</a>
     </div>
 
 
@@ -113,7 +118,7 @@
 
 
     <?php if (isset($_SESSION['logonUser'])) {
-            if ($_SESSION['logonUser'] == 'aktif') { ?>
+        if ($_SESSION['logonUser'] == 'aktif') { ?>
     <script>
     // $('#bgBlur').css('filter', 'none').fadeIn(1000);
     $('#loginCard').fadeOut(600);
@@ -130,7 +135,7 @@
     $('#unknown').fadeOut();
     </script>
     <?php }
-        } ?>
+    } ?>
 
     <script>
     $(document).ready(function() {
