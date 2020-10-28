@@ -49,8 +49,7 @@
                                 d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM2 2h12s2 0 2 2v6s0 2-2 2H2s-2 0-2-2V4s0-2 2-2z" />
                         </svg>Auditorium</a>
 
-                    <a id='navRC' href="https://foreng.wika.co.id/news" target="__blank" class="nav-link active"
-                        style="width: fit-content;">
+                    <a id='navRC' href="https://foreng.wika.co.id/news" target="__blank" class="nav-link active">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down-fill"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -64,7 +63,7 @@
                                 d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                         </svg>About</a>
 
-                    <a id='navEF' class="nav-link active" style="width: fit-content;">
+                    <a id='navEF' class="nav-link active">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -78,8 +77,9 @@
             </div>
         </nav>
     </div>
+
     <!-- Login with email -->
-    <form id="loginwithemail" autocomplete="off" action="/pages/login" method="post">
+    <form id="loginEmail" class="" autocomplete="off" action="/pages/loginEmail" method="post">
         <div id="registration" class="wrapper">
             <div id='bgBlur' class="wrapper-bg"></div>
             <div id='loginCard' class="loginPanel">
@@ -88,10 +88,28 @@
                 <p class="user-select-none">E-mail</p>
                 <input id="username" autocomplete="off" type="text" name="email" placeholder="Enter E-mail">
                 <p class="user-select-none">ID Peserta</p>
-                <input id="password" autocomplete="off" type="text" name="password" placeholder="Enter ID Peserta">
+                <input id="password" autocomplete="off" type="text" name="idPeserta" placeholder="Enter ID Peserta">
                 <input type="submit" autocomplete="off" name="login" value="Login">
                 <p style="margin-top: 0%;"></p>
-                <a id="phonenumberbutton" class="sign up" href="#">Login with Phone Number</a>
+                <a id="loginPhoneButton" class="signup">Login with phone number</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Login with phone number -->
+    <form id="loginPhone" class="d-none" autocomplete="off" action="/pages/loginPhone" method="post">
+        <div id="registration" class="wrapper">
+            <div id='bgBlur' class="wrapper-bg"></div>
+            <div id='loginCard' class="loginPanel">
+                <img src="/assets/photos/forenglogo.png" class="foto">
+                <h1 class="user-select-none">Welcome</h1>
+                <p class="user-select-none">Phone Number</p>
+                <input id="username" autocomplete="off" type="text" name="phoneNum" placeholder="Enter Phone Number">
+                <p class="user-select-none">ID Peserta</p>
+                <input id="password" autocomplete="off" type="text" name="idPeserta" placeholder="Enter ID Peserta">
+                <input type="submit" autocomplete="off" name="login" value="Login">
+                <p style="margin-top: 0%;"></p>
+                <a id="loginEmailButton" class="signup">Login with email</a>
             </div>
         </div>
     </form>
@@ -145,9 +163,8 @@
         <div class="wrapper-bg-auditorium">
             <!-- <div class="container"> -->
             <div class="position embed-responsive embed-responsive-16by9 centered-thing">
-                <iframe id='auditoriumVideo' src="<?= $av['video']; ?>"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe class="ifa" id='auditoriumVideo' src="<?php echo $av['video'] ?>"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <!-- </div> -->
         </div>
@@ -256,9 +273,25 @@
                     </div>
                 </div>
                 <div class="userChat">
-                    <input id="chatMessage" class="col-9" type="text">
-                    <a id="sendChat" href="#" class="col-3">
+                    <input id="chatMessage" class="col-8" type="text">
+                    <a id="sendChat" href="#" class="col-2">
                         Send
+                    </a>
+                    <a href="#" id="scroll-button" class="col-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#ffffff">
+                                    <path
+                                        d="M86,100.84217l-27.38383,-27.38383c-2.967,-2.967 -7.783,-2.967 -10.75,0v0c-2.967,2.967 -2.967,7.783 0,10.75l33.067,33.067c2.80217,2.80217 7.33867,2.80217 10.13367,0l33.067,-33.067c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -319,19 +352,39 @@
     <?php if (isset($_SESSION['logonUser'])) {
         if ($_SESSION['logonUser'] == 'aktif') { ?>
     <script>
-    $('#bgBlur').css('filter', 'none').fadeIn(1000);
-    $('#loginCard').fadeOut(600);
-    $('#nav').fadeIn(600);
+    $(document).ready(function() {
+        if (window.matchMedia("(max-width: 1080px)").matches) {
+            // The viewport is less than 768 pixels wide
+            alert("Untuk experience maksimal, gunakan laptop atau komputer.");
+            $('#bgBlur').css('filter', 'none').fadeIn(1000);
+            $('#loginCard').fadeOut(600);
+            $('#nav').fadeIn(600);
 
-    $('#registration').fadeOut();
-    $('#lobby').fadeIn();
-    $('#auditorium').fadeOut();
-    $('#about').fadeOut();
-    $('#eventFeedback').fadeOut();
-    $('#exhibition').fadeOut();
-    $('#connectionArea').fadeOut();
-    $('#resourceCenter').fadeOut();
-    $('#unknown').fadeOut();
+            $('#registration').fadeOut();
+            $('#lobby').fadeOut();
+            $('#auditorium').fadeIn();
+            $('#about').fadeOut();
+            $('#eventFeedback').fadeOut();
+            $('#exhibition').fadeOut();
+            $('#connectionArea').fadeOut();
+            $('#resourceCenter').fadeOut();
+            $('#unknown').fadeOut();
+        } else {
+            $('#bgBlur').css('filter', 'none').fadeIn(1000);
+            $('#loginCard').fadeOut(600);
+            $('#nav').fadeIn(600);
+
+            $('#registration').fadeOut();
+            $('#lobby').fadeIn();
+            $('#auditorium').fadeOut();
+            $('#about').fadeOut();
+            $('#eventFeedback').fadeOut();
+            $('#exhibition').fadeOut();
+            $('#connectionArea').fadeOut();
+            $('#resourceCenter').fadeOut();
+            $('#unknown').fadeOut();
+        }
+    });
     </script>
     <?php }
     } ?>
@@ -357,6 +410,15 @@
 
     <script>
     $(document).ready(function() {
+        if (window.matchMedia("(max-width: 1080px)").matches) {
+            // The viewport is less than 768 pixels wide
+            alert("Untuk experience maksimal, gunakan laptop atau komputer.");
+        } else {
+            // The viewport is at least 768 pixels wide
+            // alert("This is a tablet or desktop.");
+        }
+    });
+    $(document).ready(function() {
         $(document).bind("contextmenu", function(e) {
             return false;
         });
@@ -381,7 +443,7 @@
                         // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
                         var height = 0;
                         height += parseInt($('#chat_body')[0].scrollHeight);
-                        $('div').animate({
+                        $('.wrapper-bg-connectionArea div').animate({
                             scrollTop: height
                         })
                         $('#chatMessage').focus();
@@ -407,31 +469,13 @@
                     // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
                     var height = 0;
                     height += parseInt($('#chat_body')[0].scrollHeight);
-                    $('div').animate({
+                    $('.wrapper-bg-connectionArea div').animate({
                         scrollTop: height
                     })
                     $('#chatMessage').focus();
                 }
             })
         });
-
-
-        // Scroll to bottom of the chat
-        // var height = 0;
-        // $('#chat_body .chatMessage').each(function(i, value) {
-        //     height += parseInt($(this).height());
-        // });
-
-        // height += '';
-
-        // setInterval(function() {
-        //     console.log(height);
-        //     $('div').animate({
-        //         scrollTop: height
-        //     });
-        // }, 5000);
-
-        //------------------------------------------------
 
         setInterval(function() {
             loadChat();
@@ -462,20 +506,45 @@
                     }
                     $('#chat_body').html(html);
                     var height = 0;
-                    height += parseInt($('#chat_body')[0].scrollHeight);
-                    console.log($('div').scrollTop());
-                    $('.wrapper-bg-connectionArea div').animate({
-                        scrollTop: height
-                    })
+                    // height += parseInt($('#chat_body')[0].scrollHeight);
+                    // console.log($('div').scrollTop());
+                    // $('.wrapper-bg-connectionArea div').animate({
+                    //     scrollTop: height
+                    // })
 
                 }
             })
         }
+
+        $("#scroll-button").click(function() {
+            var height = 0;
+            height += parseInt($('#chat_body')[0].scrollHeight);
+            console.log($('div').scrollTop());
+            $('.wrapper-bg-connectionArea div').animate({
+                scrollTop: height
+            })
+        })
     })
 
 
-    $("#navAuditorium").click(function() {
+    // $("#playvid").click(function(ev) {
+    //     $('#auditoriumVideo')[0].src += "&autoplay=1";
+    //     ev.preventDefault();
+    // })
+
+    $("#loginPhoneButton").click(function() {
+        $("#loginEmail").addClass("d-none");
+        $("#loginPhone").removeClass("d-none")
+    })
+
+    $("#loginEmailButton").click(function() {
+        $("#loginPhone").addClass("d-none");
+        $("#loginEmail").removeClass("d-none")
+    })
+
+    $("#navAuditorium").click(function(ev) {
         $('#auditoriumVideo')[0].src += "&autoplay=1";
+        ev.preventDefault();
         // ev.preventDefault();
         $('#auditorium').fadeIn();
         $('#about').fadeOut();

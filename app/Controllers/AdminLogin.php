@@ -21,17 +21,9 @@ class AdminLogin extends BaseController
 
     public function index()
     {
-        $user = $this->user->findAll();
-        $audVid = $this->auditorium->findAll();
-        $sponsorData = $this->sponsor->findAll();
-        $data = [
-            'user' => $user,
-            'sponsorData' => $sponsorData,
-            'audvid' => $audVid
-        ];
-        // dd($sponsorData);
+        session_destroy();
         echo view('templates/header');
-        echo view('loginAdmin', $data);
+        echo view('loginAdmin');
         echo view('templates/footer');
     }
 
@@ -43,12 +35,14 @@ class AdminLogin extends BaseController
             $this->request->getVar('password');
         $status =
             $this->request->getVar('status');
-        $userData = $this->user->where('password', $password)->where('status', $status)
+        $userData = $this->user->where('email', $email)
+            ->where('id_peserta', $password)
+            ->where('status', 'admin')
             ->findAll();
         if ($userData == null) {
             return redirect()->to('/admin');
         } else {
-            $_SESSION['logonUser'] = 'aktif';
+            $_SESSION['logonAdmin'] = 'aktif';
             $_SESSION['username'] = $userData[0]['name'];
             return redirect()->to('/admin/index',);
         }

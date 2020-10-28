@@ -19,17 +19,26 @@ class Admin extends BaseController
 
     public function index()
     {
+        if (isset($_SESSION['logonAdmin'])) {
+            if ($_SESSION['logonAdmin'] == 'aktif') {
+                $audVid = $this->auditorium->findAll();
+                $sponsorData = $this->sponsor->findAll();
+                $data = [
+                    'sponsorData' => $sponsorData,
+                    'audvid' => $audVid
+                ];
 
-        $audVid = $this->auditorium->findAll();
-        $sponsorData = $this->sponsor->getSponsor();
-        $data = [
-            'sponsorData' => $sponsorData,
-            'audvid' => $audVid
-        ];
-        // dd($sponsorData);
-        echo view('templates/header');
-        echo view('adminDashboard', $data);
-        echo view('templates/footer');
+
+                // dd($sponsorData);
+                echo view('templates/header');
+                echo view('adminDashboard', $data);
+                echo view('templates/footer');
+            } else {
+                return redirect()->to('/admin');
+            }
+        } else {
+            return redirect()->to('/admin');
+        }
     }
 
     public function detail($name)
@@ -49,12 +58,21 @@ class Admin extends BaseController
 
     public function input()
     {
-        $data = [
-            'validation' => \Config\Services::validation()
-        ];
-        echo view('templates/header');
-        echo view('admin', $data);
-        echo view('templates/footer');
+
+        if (isset($_SESSION['logonAdmin'])) {
+            if ($_SESSION['logonAdmin'] == 'aktif') {
+                $data = [
+                    'validation' => \Config\Services::validation()
+                ];
+                echo view('templates/header');
+                echo view('admin', $data);
+                echo view('templates/footer');
+            } else {
+                return redirect()->to('/admin');
+            }
+        } else {
+            return redirect()->to('/admin');
+        }
     }
 
     public function insertData()
@@ -197,19 +215,12 @@ class Admin extends BaseController
 
     public function videoAuditorium()
     {
-
-        $vidCode = preg_replace(
-            "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
-            "//www.youtube.com/embed/$2",
-            $this->request->getVar('audVid')
-        );
-
+        $vidCode = $this->request->getVar('audVid');
         $data = [
-            'video' => 'https:' . $vidCode . '?autoplay=0'
+            'video' => $vidCode
         ];
-
         $this->auditorium->update($id = 1111, $data);
-        return redirect()->to('/admin');
+        return redirect()->to('/admin/index');
     }
 
     public function doLogin()
@@ -218,9 +229,12 @@ class Admin extends BaseController
             = $this->request->getVar('email');
         $password =
             $this->request->getVar('password');
-        $userData = $this->user->where('email', $email)
-            ->where('password', $password)
-            ->findAll();
+        // $userData = $this->user->where('email', $email)
+        //     ->where('id_peserta', $password)
+        //     ->where('status', 'admin')
+        //     ->findAll();
+        $userData = $this->user->getWhere(['email' => $email, 'id_peserta' => $password, 'status' => 'admin']);
+        $userData = $userData->getResultArray();
         if ($userData == null) {
             return redirect()->to('/admin');
         } else {

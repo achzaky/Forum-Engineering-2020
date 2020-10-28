@@ -18,11 +18,11 @@ class SponsorModel extends Model
         'sponsor_banner',
         'sponsor_logo',
     ];
-    public function getSponsor($description = false)
+    public function getSponsor($name = false)
     {
-        if ($description == false) {
+        if ($name == false) {
             return $this->findAll();
         }
-        return $this->where(['description' => $description])->first();
+        return $this->where(['name' => $name])->first();
     }
 }

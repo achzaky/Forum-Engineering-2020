@@ -54,7 +54,7 @@ body {
 }
 
 .wrapper-bg-lobby {
-  background-image: url("../photos/bg_lobby2.png");
+  background-image: url("../photos/bg_lobby.png");
   background-position: 0% 25%;
   height: 100%;
   background-size: 100%;
@@ -133,10 +133,10 @@ body {
 
 .navbar-brand {
   font-family: "Poppins", cursive;
-  font-size: 28px;
+  font-size: 1.75em;
 }
 .navbar-nav {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   margin-bottom: -5px;
   font-family: "Poppins", cursive;
   font-size: medium;
@@ -147,7 +147,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 155px;
+  width: 12vw;
 }
 
 .nav-link:hover {
@@ -162,7 +162,7 @@ body {
 
 .loginPanel {
   width: 21%;
-  height: 60%;
+  /* height: 60%; */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.75); /* Black w/opacity/see-through */
   color: black;
@@ -172,15 +172,18 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 2%;
   display: block;
+  padding-bottom: 5%;
+}
+
+.loginPanel h1 {
+  font-size: 2.8vh;
 }
 .foto {
-  width: 120px;
-  height: 120px;
+  width: 20vh;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(55%, -50%);
   border-radius: 30%;
-  margin-left: 145px;
 }
 
 .flip-card {
@@ -291,14 +294,20 @@ h1 {
 
 .loginPanel p {
   margin-left: 10%;
-  margin-top: 2%;
+  margin-top: 3%;
   font-weight: bold;
   color: white;
   font-family: "Poppins", cursive;
+  font-size: 2vh;
 }
 .loginPanel input {
   width: 100%;
   margin-bottom: 20px;
+  font-size: 2vh;
+}
+
+.loginPanel a {
+  font-size: 2vh;
 }
 
 .loginPanel input[type="text"],
@@ -312,7 +321,7 @@ input[type="password"] {
   margin-top: -5%;
   margin-left: 10%;
   color: white;
-  font-size: 15px;
+  font-size: 2vh;
   font-family: "Poppins", cursive;
 }
 
@@ -324,7 +333,7 @@ input[type="password"] {
   margin-left: 25%;
   margin-top: 2%;
   margin-bottom: 2%;
-  font-size: 18px;
+  font-size: 2.5vh;
   border-radius: 20px;
   font-family: "Poppins", cursive;
   box-shadow: 0 0 1px #ccc;
@@ -355,7 +364,7 @@ input[type="password"] {
   color: green;
 }
 
-iframe {
+iframe .ifa {
   display: block;
   margin: 0 auto;
   width: 28.2%;
@@ -474,7 +483,7 @@ iframe .ibk {
   overflow-y: scroll;
   height: 85vh;
   position: relative;
-  top: 1%;
+  top: 4%;
   margin: 0;
   scroll-behavior: smooth;
   /* bottom: 0; */
