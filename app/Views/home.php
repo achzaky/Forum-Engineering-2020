@@ -35,7 +35,9 @@
                                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                         </svg>Exhibition</a>
 
-                    <a id='navUnknown' class="nav-link active">
+                    <a id='navUnknown'
+                        href="https://datastudio.google.com/u/0/reporting/74e5ebb4-e21c-4dbb-83aa-97456a4e8c39?s=se4VFc-XxXM"
+                        target="__blank" class="nav-link active">
                         <svg height="2vh" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -237,78 +239,97 @@
         </div>
     </div>
 
-    <!-- Data Center -->
-    <!-- <div id='unknown' class='wrapper'>
-        <div class="wrapper-bg-unknown">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 embed-responsive embed-responsive-16by9 centered-things">
-                        <iframe width="600" height="338"
-                            src="https://datastudio.google.com/embed/reporting/74e5ebb4-e21c-4dbb-83aa-97456a4e8c39/page/iy7dB"
-                            frameborder="0" style="border:0" allowfullscreen></iframe>
+    <!-- Connection Area -->
+    <div id='connectionArea' class='wrapper'>
+        <div class="wrapper-bg-connectionArea row">
+            <div class="col-4">
+                <div class="transboxChat colChat">
+                    <div id="chat_body">
+                        <div class="chatMessage">
+                            <div class="sender">
+
+                                <p><span>Name:</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Odio,
+                                    dolore.</p>
+                            </div>
+                        </div>
+                        <div class="chatMessage">
+                            <div class="receiver">
+                                <p><span>Name:</span><br>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userChat">
+                        <input id="chatMessage" class="col-8" type="text">
+                        <a id="sendChat" href="#" class="col-2">
+                            Send
+                        </a>
+                        <a href="#" id="scroll-button" class="col-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                                viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#ffffff">
+                                        <path
+                                            d="M86,100.84217l-27.38383,-27.38383c-2.967,-2.967 -7.783,-2.967 -10.75,0v0c-2.967,2.967 -2.967,7.783 0,10.75l33.067,33.067c2.80217,2.80217 7.33867,2.80217 10.13367,0l33.067,-33.067c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> -->
 
 
-    <!-- Connection Area -->
-    <div id='connectionArea' class='wrapper'>
-        <div class="wrapper-bg-connectionArea">
-            <div class="transboxChat colChat">
-                <div id="chat_body">
-                    <div class="chatMessage">
-                        <div class="sender">
+            <div class="col-8">
+                <!-- Announcement -->
+                <div class="transboxChat colAnnouncement">
+                    <div id="chat_body">
+                        <div class="chatMessage">
+                            <div class="sender">
 
-                            <p><span>Name:</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Odio,
-                                dolore.</p>
+                                <p><span>Name:</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Odio,
+                                    dolore.</p>
+                            </div>
+                        </div>
+                        <div class="chatMessage">
+                            <div class="receiver">
+                                <p><span>Name:</span><br>Lorem ipsum dolor sit amet.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="chatMessage">
-                        <div class="receiver">
-                            <p><span>Name:</span><br>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="userChat">
-                    <input id="chatMessage" class="col-8" type="text">
-                    <a id="sendChat" href="#" class="col-2">
-                        Send
-                    </a>
-                    <a href="#" id="scroll-button" class="col-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
-                            viewBox="0 0 172 172" style=" fill:#000000;">
-                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                                style="mix-blend-mode: normal">
-                                <path d="M0,172v-172h172v172z" fill="none"></path>
-                                <g fill="#ffffff">
-                                    <path
-                                        d="M86,100.84217l-27.38383,-27.38383c-2.967,-2.967 -7.783,-2.967 -10.75,0v0c-2.967,2.967 -2.967,7.783 0,10.75l33.067,33.067c2.80217,2.80217 7.33867,2.80217 10.13367,0l33.067,-33.067c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0z">
-                                    </path>
+                    <div class="userChat">
+                        <input id="chatMessage" class="col-8" type="text">
+                        <a id="sendChat" href="#" class="col-2">
+                            Send
+                        </a>
+                        <a href="#" id="scroll-button" class="col-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                                viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#ffffff">
+                                        <path
+                                            d="M86,100.84217l-27.38383,-27.38383c-2.967,-2.967 -7.783,-2.967 -10.75,0v0c-2.967,2.967 -2.967,7.783 0,10.75l33.067,33.067c2.80217,2.80217 7.33867,2.80217 10.13367,0l33.067,-33.067c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0z">
+                                        </path>
+                                    </g>
                                 </g>
-                            </g>
-                        </svg>
-                    </a>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!-- Resource Center -->
-    <!-- <div id='resourceCenter' class='wrapper'>
-        <div class="wrapper-bg-resource"></div>
-    </div> -->
-
-
-    <!-- About -->
-    <!-- <div id='about' class='wrapper'>
-        <div class="wrapper-bg-about"></div>
-    </div> -->
 
 
     <!-- Event Feedback -->
@@ -432,26 +453,28 @@
             if (keycode == '13') {
                 var chatMessage = $('#chatMessage').val();
                 console.log(chatMessage);
-                $.ajax({
-                    url: "/sendChat",
-                    type: "POST",
-                    contentType: "json",
-                    data: JSON.stringify({
-                        chatMessage: chatMessage
-                    }),
-                    success: function(data) {
-                        $('#chatMessage').val("");
-                        console.log('AJAX SUCCESS');
-                        console.log(data);
-                        // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
-                        var height = 0;
-                        height += parseInt($('#chat_body')[0].scrollHeight);
-                        $('.wrapper-bg-connectionArea div').animate({
-                            scrollTop: height
-                        })
-                        $('#chatMessage').focus();
-                    }
-                })
+                if (chatMessage != '') {
+                    $.ajax({
+                        url: "/sendChat",
+                        type: "POST",
+                        contentType: "json",
+                        data: JSON.stringify({
+                            chatMessage: chatMessage
+                        }),
+                        success: function(data) {
+                            $('#chatMessage').val("");
+                            console.log('AJAX SUCCESS');
+                            console.log(data);
+                            // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
+                            var height = 0;
+                            height += parseInt($('#chat_body')[0].scrollHeight);
+                            $('.wrapper-bg-connectionArea div').animate({
+                                scrollTop: height
+                            })
+                            $('#chatMessage').focus();
+                        }
+                    })
+                }
             }
         })
 
@@ -467,8 +490,6 @@
                 }),
                 success: function(data) {
                     $('#chatMessage').val("");
-                    console.log('AJAX SUCCESS');
-                    console.log(data);
                     // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
                     var height = 0;
                     height += parseInt($('#chat_body')[0].scrollHeight);
@@ -485,14 +506,12 @@
         }, 5000);
 
         function loadChat() {
-            // console.log(username);
             $.ajax({
                 url: "/loadChat",
                 type: "GET",
                 contentType: "json",
                 success: function(data) {
                     data = JSON.parse(data);
-                    console.log(data);
                     var html = '';
                     for (var count = 0; count < data.length; count++) {
                         if (data[count].messageDirection == 'right') {
@@ -671,22 +690,6 @@
         $('#unknown').fadeOut();
     });
 
-    // $("#navUnknown").click(function() {
-    //     var video = $('#auditoriumVideo').attr("src");
-    //     $('#auditoriumVideo').attr("src", "");
-    //     $('#auditoriumVideo').attr("src", video);
-
-    //     $('#auditorium').fadeOut();
-    //     $('#unknown').fadeIn();
-    //     $('#about').fadeOut();
-    //     $('#eventFeedback').fadeOut();
-    //     $('#exhibition').fadeOut();
-    //     $('#connectionArea').fadeOut();
-    //     $('#resourceCenter').fadeOut();
-    //     $('#lobby').fadeOut();
-    //     $('#registration').fadeOut();
-    // });
-
     $("#navConnectionArea").click(function() {
         var video = $('#auditoriumVideo').attr("src");
         $('#auditoriumVideo').attr("src", "");
@@ -703,21 +706,6 @@
         $('#unknown').fadeOut();
     });
 
-    // $("#navRC").click(function() {
-    //     var video = $('#auditoriumVideo').attr("src");
-    //     $('#auditoriumVideo').attr("src", "");
-    //     $('#auditoriumVideo').attr("src", video);
-
-    //     $('#auditorium').fadeOut();
-    //     $('#about').fadeOut();
-    //     $('#eventFeedback').fadeOut();
-    //     $('#exhibition').fadeOut();
-    //     $('#connectionArea').fadeOut();
-    //     $('#resourceCenter').fadeIn();
-    //     $('#lobby').fadeOut();
-    //     $('#registration').fadeOut();
-    // });
-
     $("#navEF").click(function() {
         var video = $('#auditoriumVideo').attr("src");
         $('#auditoriumVideo').attr("src", "");
@@ -733,19 +721,5 @@
         $('#registration').fadeOut();
         $('#unknown').fadeOut();
     });
-
-    // $("#navAbout").click(function() {
-    //     var video = $('#auditoriumVideo').attr("src");
-    //     $('#auditoriumVideo').attr("src", "");
-    //     $('#auditoriumVideo').attr("src", video);
-
-    //     $('#auditorium').fadeOut();
-    //     $('#about').fadeIn();
-    //     $('#eventFeedback').fadeOut();
-    //     $('#exhibition').fadeOut();
-    //     $('#connectionArea').fadeOut();
-    //     $('#resourceCenter').fadeOut();
-    //     $('#lobby').fadeOut();
-    // });
     </script>
 </body>

@@ -315,17 +315,13 @@ h1 {
   font-size: 2vh;
 }
 
-.loginPanel a {
-  font-size: 2vh;
-}
-
 .loginPanel input[type="text"],
 input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 40px;
+  height: 4vh;
   width: 80%;
   margin-top: -5%;
   margin-left: 10%;
@@ -337,7 +333,7 @@ input[type="password"] {
 .loginPanel input[type="submit"] {
   border: 0px;
   outline: none;
-  height: 40px;
+  height: 4vh;
   width: 50%;
   margin-left: 25%;
   margin-top: 2%;
@@ -353,11 +349,12 @@ input[type="password"] {
   cursor: pointer;
   -webkit-transform: scale(1.1);
   background: green;
+  color: white;
 }
 
 .signup {
   text-decoration: none;
-  font-size: 17px;
+  font-size: 2vh;
   line-height: 20px;
   color: white;
   margin-left: 5%;
@@ -367,9 +364,7 @@ input[type="password"] {
 
 .signup:hover {
   cursor: pointer;
-  font-size: large;
   text-decoration: none;
-  -webkit-transform: scale(1.1);
   color: green;
 }
 
@@ -490,6 +485,21 @@ iframe .ibk {
   left: 5%;
   overflow-y: scroll;
   height: 85vh;
+  position: relative;
+  top: 4%;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* bottom: 0; */
+}
+
+.colAnnouncement {
+  flex-basis: 0;
+  flex-grow: 1;
+  /* max-width: 30%; */
+  width: 50vw;
+  left: 20%;
+  overflow-y: scroll;
+  height: 30vh;
   position: relative;
   top: 4%;
   margin: 0;

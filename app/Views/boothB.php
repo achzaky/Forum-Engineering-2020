@@ -89,12 +89,13 @@
             <div class="row">
                 <div class="col">
                     <div class="vidSponsor" style="margin-top: 7.1%;">
-                        <iframe class="boothB_video" src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=1"
+                        <iframe class="boothB_video" src="<?= $sd['video']; ?>?autoplay=1&mute=1&controls=0&loop=1"
                             frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="col" style="margin-top:-18vh; margin-left:72vw">
                         <img class="boothB_banner" src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>"
-                            id="modalButton" data-toggle="modal" data-target="#exampleModal">
+                            id="modalButton" data-toggle="tooltip" data-placement="top"
+                            title="Klik untuk informasi lebih lanjut">
                     </div>
                 </div>
             </div>
@@ -106,8 +107,9 @@
         <p id="text" class="textModal"> For more info contact via Whatsapp<br>or visit the website by<br>click the
             button below
         </p>
-        <a class="modalButton btn" href="https://wa.me/<?= $sd['phoneNumber']; ?>" role="button">Whatsapp</a>
-        <a class="modalButton btn" href="<?= $sd['website']; ?>" role="button">Website</a>
+        <a class="modalButton btn" href="https://wa.me/62<?= $sd['phoneNumber']; ?>" target="__blank"
+            role="button">Whatsapp</a>
+        <a class="modalButton btn" href="<?= $sd['website']; ?>" target="__blank" role="button">Website</a>
     </div>
 
 
@@ -134,6 +136,10 @@
     } ?>
 
     <script>
+    window.onload = setTimeout(function() {
+        alert('Untuk informasi lebih lanjut, klik banner.');
+    }, 1000);
+
     $(document).ready(function() {
         $('#lobby').fadeIn();
         $('#auditorium').fadeOut();
@@ -172,7 +178,6 @@
         var video = $('#auditoriumVideo').attr("src");
         $('#auditoriumVideo').attr("src", "");
         $('#auditoriumVideo').attr("src", video);
-
 
         $('#lobby').fadeIn();
         $('#auditorium').fadeOut();
