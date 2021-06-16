@@ -84,8 +84,8 @@
         <div class="wrapper-bg-boothK">
             <?php foreach ($sponsorData as $sd) : ?>
             <div class="row">
-                <div class="col" style="margin-top:9.8vw; margin-left:58vw">
-                    <img src="/assets/photos/sponsor/logo/<?= $sd['sponsor_logo']; ?>" class="boothK_logo">
+                <div class="col" style="margin-top:9.8vw; margin-left:61vw">
+                    <img src="/public/assets/photos/sponsor/logo/<?= $sd['sponsor_logo']; ?>" class="boothK_logo">
                 </div>
             </div>
             <div class="row">
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col">
                     <img style="margin-top: 11.7vw; margin-left: 13.3vw"
-                        src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" id="modalButton"
+                        src="/public/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" id="modalButton"
                         data-toggle="tooltip" data-placement="top" title="Klik untuk informasi lebih lanjut"
                         class="boothK_banner">
                 </div>
@@ -106,7 +106,7 @@
         </div>
     </div>
     <div id="manualModal" class="manualModal d-none">
-        <img src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" alt="">
+        <img src="/public/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" alt="">
         <p id="text" class="textModal"> For more info contact via Whatsapp<br>or visit the website by<br>click the
             button below
         </p>

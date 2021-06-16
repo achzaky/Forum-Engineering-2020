@@ -84,23 +84,28 @@
         <div class="wrapper-bg-boothW">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col" style="margin-top:25.62%; margin-left:21.1%">
-                        <img class="boothW_banner" src="/assets/photos/sponsor/banner/wikaRealty.gif" id="modalButton"
-                            data-toggle="modal" data-target="#exampleModal">
+                    <div class="col" style="margin-top:28.62%; margin-left:25.7%">
+                        <img class="boothW_banner" src="public/assets/photos/sponsor/banner/wikaRealty.gif"
+                            id="modalButton" data-toggle="modal" data-target="#exampleModal">
                     </div>
-                    <div class="col vidSponsor" style="margin-top: 22%;">
+                    <div class="col vidSponsor" style="margin-top: 25.7%;">
                         <iframe class="boothW_video" src="https://www.youtube.com/embed/0Zoutxtslvw?autoplay=0"
                             frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="col" style="margin-top:26%; margin-left:-35%">
-                        <img class="boothW_banner" src="/assets/photos/sponsor/banner/wikaRealty.gif" id="modalButton"
-                            data-toggle="modal" data-target="#exampleModal">
+                    <div class="col" style="margin-top:28%; margin-left:-40%">
+                        <img class="boothW_banner" src="public/assets/photos/sponsor/banner/wikaRealty.gif"
+                            id="modalButton2" data-toggle="modal" data-target="#exampleModal">
                     </div>
                 </div>
             </div>
         </div>
         <div id="manualModal" class="manualModal d-none">
-            <img src="/assets/photos/mandiri.png" alt="">
+            <img src="public/assets/photos/sponsor/banner/wikaRealty.gif" alt="">
+            <p id="text" class="textModal"> For more info contact via Whatsapp<br>or visit the website by<br>click the
+                button below
+            </p>
+            <a class="modalButton btn" href="#" target="__blank" role="button">Whatsapp</a>
+            <a class="modalButton btn" href="https://www.wika.co.id/" target="__blank" role="button">Website</a>
         </div>
 
 
@@ -126,6 +131,10 @@
         } ?>
 
         <script>
+        window.onload = setTimeout(function() {
+            alert('Untuk informasi lebih lanjut, klik banner.');
+        }, 1000);
+
         $(document).ready(function() {
             $('#lobby').fadeIn();
             $('#auditorium').fadeOut();
@@ -137,6 +146,11 @@
             $('#unknown').fadeOut();
         });
         $("#modalButton").click(function() {
+            $("#manualModal").removeClass('d-none');
+            $("#nav").addClass('d-none');
+        })
+
+        $("#modalButton2").click(function() {
             $("#manualModal").removeClass('d-none');
             $("#nav").addClass('d-none');
         })

@@ -30,8 +30,10 @@ class Pages extends BaseController
 
     public function index()
     {
+        $ip = getUserIP();
         $currentTime = Time::now('Asia/Jakarta', 'en_US');
-        $ip = $this->request->getIPAddress();
+        // $ip = $this->request->getIPAddress();
+        // $ip = $_SERVER['REMOTE_ADDR'];
 
         if (isset($_SESSION['logonUser'])) {
             if ($_SESSION['logonUser'] == 'aktif') {
@@ -85,13 +87,16 @@ class Pages extends BaseController
         // dd($userData);
 
         if ($userData == null) {
+            $_SESSION['loginStatus'] = 'failed';
             return redirect()->to('/pages');
+            unset($_SESSION['loginStatus']);
         } else {
             $_SESSION['logonUser'] = 'aktif';
             $_SESSION['username'] = $userData[0]['name'];
             $_SESSION['email'] =
                 $userData[0]['email'];
             $_SESSION['id_peserta'] = $userData[0]['id_peserta'];
+            $_SESSION['status'] = $userData[0]['status'];
             return redirect()->to('/pages');
         }
     }
@@ -112,12 +117,16 @@ class Pages extends BaseController
         $userData = $userData->getResultArray();
 
         if ($userData == null) {
+            $_SESSION['loginStatus'] = 'failed';
             return redirect()->to('/pages');
+            unset($_SESSION['loginStatus']);
         } else {
             $_SESSION['logonUser'] = 'aktif';
             $_SESSION['username'] = $userData[0]['name'];
             $_SESSION['email'] =
                 $userData[0]['email'];
+            $_SESSION['id_peserta'] = $userData[0]['id_peserta'];
+            $_SESSION['status'] = $userData[0]['status'];
             return redirect()->to('/pages');
         }
     }

@@ -82,8 +82,8 @@
         <div class="wrapper-bg-boothB">
             <?php foreach ($sponsorData as $sd) : ?>
             <div class="row">
-                <div class="col" style="margin-top:10.5vw; margin-left:28vw">
-                    <img class="boothB_logo" src="/assets/photos/sponsor/logo/<?= $sd['sponsor_logo']; ?>">
+                <div class="col" style="margin-top:10.5vw; margin-left:25vw">
+                    <img class="boothB_logo" src="/public/assets/photos/sponsor/logo/<?= $sd['sponsor_logo']; ?>">
                 </div>
             </div>
             <div class="row">
@@ -93,9 +93,9 @@
                             frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="col" style="margin-top:-18vh; margin-left:72vw">
-                        <img class="boothB_banner" src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>"
-                            id="modalButton" data-toggle="tooltip" data-placement="top"
-                            title="Klik untuk informasi lebih lanjut">
+                        <img class="boothB_banner"
+                            src="/public/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" id="modalButton"
+                            data-toggle="tooltip" data-placement="top" title="Klik untuk informasi lebih lanjut">
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
         </div>
     </div>
     <div id="manualModal" class="manualModal d-none">
-        <img src="/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" alt="">
+        <img src="/public/assets/photos/sponsor/banner/<?= $sd['sponsor_banner']; ?>" alt="">
         <p id="text" class="textModal"> For more info contact via Whatsapp<br>or visit the website by<br>click the
             button below
         </p>

@@ -44,6 +44,8 @@ $routes->get('/boothk/(:any)', 'Booth::boothK/$1');
 $routes->get('/boothw', 'Booth::boothW');
 $routes->post('/sendChat', 'ChatSystem::sendChat');
 $routes->get('/loadChat', 'ChatSystem::loadChat');
+$routes->post('/sendAnnouncement', 'AnnouncementSystem::sendAnnouncement');
+$routes->get('/loadAnnouncement', 'AnnouncementSystem::loadAnnouncement');
 $routes->get('/chat', 'ChatSystem::index');
 
 /**

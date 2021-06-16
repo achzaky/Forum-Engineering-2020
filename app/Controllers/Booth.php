@@ -39,7 +39,8 @@ class Booth extends BaseController
 
     public function boothK($sponsor)
     {
-        $ip = $this->request->getIPAddress();
+        // $ip = $this->request->getIPAddress();
+        $ip = getUserIP();
         $this->userTraffic->insert([
             'ip_address' => $ip,
             'user_name' => $_SESSION['username'],
@@ -61,7 +62,8 @@ class Booth extends BaseController
 
     public function boothB($sponsor)
     {
-        $ip = $this->request->getIPAddress();
+        // $ip = $this->request->getIPAddress();
+        $ip = getUserIP();
         $this->userTraffic->insert([
             'ip_address' => $ip,
             'user_name' => $_SESSION['username'],
@@ -91,7 +93,8 @@ class Booth extends BaseController
         //     'sponsorData' => $sponsorData
         // ];
 
-        $ip = $this->request->getIPAddress();
+        // $ip = $this->request->getIPAddress();
+        $ip = getUserIP();
         $this->userTraffic->insert([
             'ip_address' => $ip,
             'user_name' => $_SESSION['username'],
